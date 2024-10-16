@@ -1,0 +1,34 @@
+/* styles.css */
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+h1, h2 {
+    color: #ff4081; /* Heading color */
+}
+
+a {
+    color: #1a73e8; /* Link color */
+}
+
+nav {
+    background-color: #212121; /* Navigation background */
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #ffffff; /* Navigation link color */
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ffb74d; /* Navigation hover */
+    color: #333333;
+    padding: 5px;
+    border-radius: 5px;
+}
