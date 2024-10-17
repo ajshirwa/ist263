@@ -3,48 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact - Abdullahi Shirwa</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="skills.html">Skills</a> | 
-        <a href="contact.html">Contact</a>
-    </nav>
+    <!-- Header section for the navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Main content of the page -->
     <main>
-        <h1>Contact</h1>
-        <address>
-            <p>123 Main Street</p>
-            <p>City, State ZIP</p>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        </address>
+        <section>
+            <h1>Contact</h1>
+            <address>
+                <p>123 Main Street</p>
+                <p>City, State ZIP</p>
+                <p>Email: <a href="mailto:abdullahishirwa1@gmail.com">abdullahishirwa1@gmail.com</a></p>
+            </address>
+        </section>
 
-        <figure>
-            <img src="../images/linkedin-logo.png" alt="LinkedIn Logo">
-            <figcaption><a href="your-linkedin-url">My LinkedIn</a></figcaption>
-        </figure>
+        <!-- LinkedIn section -->
+        <section>
+            <figure>
+                <img src="../images/linkedin-logo.png" alt="LinkedIn Logo">
+                <figcaption>
+                    <a href="https://www.linkedin.com/in/abdullahishirwa" target="_blank">My LinkedIn</a>
+                </figcaption>
+            </figure>
+        </section>
 
-        <div>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL" 
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy"></iframe>
-        </div>
+        <!-- Google Map -->
+        <section>
+            <div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"></iframe>
+            </div>
+        </section>
 
-        <form action="YOUR_FORM_HANDLER" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <input type="submit" value="Submit">
-        </form>
+        <!-- Contact form section -->
+        <section>
+            <form action="YOUR_FORM_HANDLER" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <hr>
         <p>&copy; 2024 Abdullahi Shirwa</p>
