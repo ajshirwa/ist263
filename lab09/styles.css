@@ -1,129 +1,71 @@
 /* styles.css */
 
-/* General Styles */
 body {
     font-family: "Arial", sans-serif;
-    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background-color: #f9f9f9; /* Light background for better contrast */
+    padding: 20px; /* Adding space between the edge of the page and flexboxes */
 }
 
 h1, h2 {
-    color: darkblue; /* Header color */
+    color: darkblue;
+    text-align: center; /* Centering main headings */
 }
 
 h1 {
-    font-size: 2em; /* Main title size */
-    text-align: center; /* Center align the main title */
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 1.5em; /* Subheading size */
-    margin-top: 20px; /* Space above subheadings */
+    font-size: 1.5em;
 }
 
-/* Navigation Styles */
-nav {
-    background-color: darkblue; /* Navigation background */
-}
-
-nav ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0;
-    text-align: center; /* Center align navigation items */
-}
-
-nav ul li {
-    display: inline; /* Horizontal list items */
-    margin: 0 15px; /* Space between links */
-}
-
-nav ul li a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold font for emphasis */
-}
-
-/* Main Content Styles */
 .part2 {
-    padding: 20px; /* Padding for contact section */
-    max-width: 800px; /* Maximum width for the content */
-    margin: auto; /* Center align the content */
-    background-color: white; /* White background for main content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    display: flex;
+    margin-bottom: 20px; /* Space between top and bottom containers */
+}
+
+.article1, .article2, .article3 {
+    margin: 10px;
+    padding: 20px; /* Space inside the containers */
+}
+
+.article1 {
+    flex: 2;
+    order: 3;
+    background-color: #cce5ff;
+    border-radius: 1em; /* Rounded corners */
+}
+
+.article2 {
+    flex: 1;
+    order: 2;
+    background-color: #f8f9fa; /* Background color for the second article */
+    border-radius: 1em; /* Rounded corners */
+}
+
+.article3 {
+    flex: 1;
+    order: 1;
+    background-color: #f8f9fa; /* Background color for the third article */
+    border-radius: 1em; /* Rounded corners */
 }
 
 .firstrow {
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Wrap items on small screens */
+    display: flex; /* Make this a flex container */
+    margin-bottom: 20px; /* Space between rows */
 }
 
-/* Table Styles */
-table {
-    width: 100%; /* Full width for the table */
-    border-collapse: collapse; /* Collapse borders */
-    margin-top: 20px; /* Space above the table */
+.skillstable, .skillsimage {
+    flex: 1; /* Allow both columns to grow equally */
+    padding: 20px; /* Space inside the containers */
+    border-radius: 1em; /* Rounded corners */
+    background-color: #e9ecef; /* Background color for both boxes */
 }
 
-table caption {
-    font-weight: bold; /* Bold caption */
-    margin-bottom: 10px; /* Space below the caption */
+.skillstable table {
+    margin: 0 auto; /* Center the table */
 }
 
-th, td {
-    border: 1px solid #ddd; /* Border for table cells */
-    padding: 8px; /* Padding for cells */
-    text-align: left; /* Left align text */
-}
-
-th {
-    background-color: darkblue; /* Header background */
-    color: white; /* Header text color */
-}
-
-.evenrow {
-    background-color: lightgray; /* Background for even rows */
-}
-
-/* Form Styles */
-form {
-    display: flex; /* Flexbox for form layout */
-    flex-direction: column; /* Vertical layout */
-    margin-top: 20px; /* Space above the form */
-}
-
-label {
-    margin-bottom: 5px; /* Space below labels */
-}
-
-input[type="text"],
-textarea {
-    padding: 10px; /* Padding for input fields */
-    border: 1px solid #ccc; /* Border for input fields */
-    border-radius: 4px; /* Rounded corners */
-}
-
-button {
-    margin-top: 10px; /* Space above button */
-    padding: 10px; /* Padding for button */
-    background-color: darkblue; /* Button background */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Image Styles */
-.skillsimage, .map-container img {
-    width: 100%; /* Full width for images */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 20px; /* Space above images */
+.skillsimage {
+    text-align: center; /* Center the image */
 }
