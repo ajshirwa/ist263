@@ -20,11 +20,11 @@
 
     <!-- Main content of the page -->
     <main>
-        <section>
+        <section class="part2"> <!-- Added class for styling -->
             <h1>Contact</h1>
             <address>
                 <p>123 Main Street</p>
-                <p>City, State ZIP</p>
+                <p>Syracuse, NY 13202</p> <!-- Updated location with a city and state -->
                 <p>Email: <a href="mailto:abdullahishirwa1@gmail.com">abdullahishirwa1@gmail.com</a></p>
             </address>
         </section>
@@ -32,7 +32,7 @@
         <!-- LinkedIn section -->
         <section>
             <figure>
-                <img src="../images/linkedin-logo.png" alt="LinkedIn Logo">
+                <img src="../images/linkedin-logo.png" alt="LinkedIn Logo" class="skillsimage"> <!-- Added class for image styling -->
                 <figcaption>
                     <a href="https://www.linkedin.com/in/abdullahishirwa" target="_blank">My LinkedIn</a>
                 </figcaption>
@@ -41,7 +41,7 @@
 
         <!-- Google Map -->
         <section>
-            <div>
+            <div class="map-container"> <!-- Added class for potential styling -->
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL" 
                     width="600" 
@@ -54,7 +54,7 @@
 
         <!-- Contact form section -->
         <section>
-            <form action="formspree" method="POST">
+            <form action="https://formspree.io/f/{your_form_id}" method="POST"> <!-- Replace {your_form_id} with your actual Formspree ID -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
