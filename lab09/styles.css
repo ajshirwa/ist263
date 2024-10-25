@@ -67,6 +67,13 @@ th, td {
     text-align: left; /* Align text */
 }
 
+/* Flexbox adjustments for skills table */
+.table-container {
+    display: flex; /* Flex container for table */
+    justify-content: center; /* Center the table */
+    margin-top: 20px; /* Spacing above the table */
+}
+
 /* Additional styles for the form */
 form {
     display: flex;
@@ -83,23 +90,4 @@ form input, form textarea, form button {
 }
 
 form button {
-    background-color: #ff4081; /* Button background */
-    color: #fff; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-form button:hover {
-    background-color: #c60055; /* Darker shade on hover */
-}
-
-/* Styles for Google Map container */
-.map-container {
-    margin-top: 20px;
-}
-
-/* Flexbox adjustments for skills */
-table {
-    width: 100%; /* Full width table */
-}
+    background-color: #ff4081;
