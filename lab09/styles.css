@@ -1,49 +1,129 @@
 /* styles.css */
 
+/* General Styles */
 body {
     font-family: "Arial", sans-serif;
-    background-color: #f5f5f5;
-    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for better contrast */
 }
 
 h1, h2 {
-    color: #ff4081; /* Heading color */
+    color: darkblue; /* Header color */
 }
 
-a, a:visited {
-    color: #1a73e8; /* Link color */
+h1 {
+    font-size: 2em; /* Main title size */
+    text-align: center; /* Center align the main title */
 }
 
+h2 {
+    font-size: 1.5em; /* Subheading size */
+    margin-top: 20px; /* Space above subheadings */
+}
+
+/* Navigation Styles */
 nav {
-    background-color: #212121; /* Navigation background */
-    padding: 10px;
-    margin-bottom: 30px;
+    background-color: darkblue; /* Navigation background */
 }
 
-nav a {
-    color: #ffffff; /* Navigation link color */
-    margin-right: 20px;
-    text-decoration: none;
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    text-align: center; /* Center align navigation items */
 }
 
-nav a:hover {
-    background-color: #ffb74d; /* Navigation hover */
-    color: #333333;
-    padding: 5px;
-    border-radius: 5px;
+nav ul li {
+    display: inline; /* Horizontal list items */
+    margin: 0 15px; /* Space between links */
 }
 
-.evenrow {
-    background-color: lightgray; /* Zebra striping */
+nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold font for emphasis */
 }
 
-/* Table styling */
-table, th, td {
-    border: 1px solid black; /* Add border to table */
+/* Main Content Styles */
+.part2 {
+    padding: 20px; /* Padding for contact section */
+    max-width: 800px; /* Maximum width for the content */
+    margin: auto; /* Center align the content */
+    background-color: white; /* White background for main content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.firstrow {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Wrap items on small screens */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width for the table */
     border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+table caption {
+    font-weight: bold; /* Bold caption */
+    margin-bottom: 10px; /* Space below the caption */
 }
 
 th, td {
-    padding: 8px; /* Add padding */
-    text-align: left; /* Align text */
+    border: 1px solid #ddd; /* Border for table cells */
+    padding: 8px; /* Padding for cells */
+    text-align: left; /* Left align text */
+}
+
+th {
+    background-color: darkblue; /* Header background */
+    color: white; /* Header text color */
+}
+
+.evenrow {
+    background-color: lightgray; /* Background for even rows */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Vertical layout */
+    margin-top: 20px; /* Space above the form */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"],
+textarea {
+    padding: 10px; /* Padding for input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    margin-top: 10px; /* Space above button */
+    padding: 10px; /* Padding for button */
+    background-color: darkblue; /* Button background */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Image Styles */
+.skillsimage, .map-container img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Space above images */
 }
