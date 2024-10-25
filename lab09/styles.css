@@ -18,10 +18,6 @@ h2 {
     font-size: 1.5em;
 }
 
-.evenrow {
-    background-color: lightgray;
-}
-
 .part2 {
     display: flex;
     flex-direction: column; /* Ensure vertical stacking */
