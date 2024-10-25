@@ -64,3 +64,30 @@ th, td {
 .column:last-child {
     margin-right: 0; /* Removes right margin for the last column */
 }
+
+/* Additional styles for the form and map */
+form {
+    display: flex;
+    flex-direction: column; /* Arrange form elements in a column */
+}
+
+form label {
+    margin-bottom: 5px; /* Add space between label and input */
+}
+
+form input, form textarea, form button {
+    margin-bottom: 15px; /* Add space between form elements */
+    padding: 10px; /* Padding for input and button */
+}
+
+form button {
+    background-color: #ff4081; /* Button background */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+form button:hover {
+    background-color: #c60055; /* Darker shade on hover */
+}
