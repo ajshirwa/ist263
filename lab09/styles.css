@@ -91,3 +91,22 @@ form button {
 form button:hover {
     background-color: #c60055; /* Darker shade on hover */
 }
+
+/* Styles for contact page layout */
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+/* Styles for Google Map container */
+.map-container {
+    margin-top: 20px;
+}
+
+/* Flexbox adjustments for skills */
+table {
+    width: 100%; /* Full width table */
+}
