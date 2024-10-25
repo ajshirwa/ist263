@@ -4,6 +4,7 @@ body {
     font-family: "Arial", sans-serif;
     background-color: #f5f5f5;
     color: #333333;
+    margin: 0; /* Added to remove default margin */
 }
 
 h1, h2 {
@@ -33,6 +34,24 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/* Flexbox styles for contact page layout */
+.contact-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    margin-bottom: 20px; /* Spacing below the flex container */
+}
+
+.contact-info, .contact-form {
+    flex: 1; /* Each section takes equal space */
+    margin-right: 10px; /* Space between columns */
+}
+
+/* Prevent margin on the last column */
+.contact-form {
+    margin-right: 0; /* Removes right margin for the last column */
+}
+
+/* Zebra striping for table */
 .evenrow {
     background-color: lightgray; /* Zebra striping */
 }
@@ -48,24 +67,7 @@ th, td {
     text-align: left; /* Align text */
 }
 
-/* Flexbox styling for rows and columns */
-.row {
-    display: flex;
-    justify-content: space-between; /* Adjusts spacing between columns */
-    margin-bottom: 20px; /* Adds spacing between rows */
-}
-
-.column {
-    flex: 1; /* Each column takes equal space */
-    margin-right: 10px; /* Adds spacing between columns */
-}
-
-/* Prevent margin on the last column */
-.column:last-child {
-    margin-right: 0; /* Removes right margin for the last column */
-}
-
-/* Additional styles for the form and map */
+/* Additional styles for the form */
 form {
     display: flex;
     flex-direction: column; /* Arrange form elements in a column */
@@ -90,15 +92,6 @@ form button {
 
 form button:hover {
     background-color: #c60055; /* Darker shade on hover */
-}
-
-/* Styles for contact page layout */
-.contact-info {
-    flex: 1;
-}
-
-.contact-form {
-    flex: 1;
 }
 
 /* Styles for Google Map container */
