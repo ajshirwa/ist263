@@ -3,69 +3,75 @@
 body {
     font-family: "Arial", sans-serif;
     margin: 0;
-    padding: 20px; /* Adding space between the edge of the page and flexboxes */
-}
-
-h1, h2 {
-    color: darkblue;
-    text-align: center; /* Centering main headings */
+    padding: 0;
 }
 
 h1 {
+    text-align: center; /* Center the main heading */
+    color: darkblue;
     font-size: 2em;
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 h2 {
+    color: darkblue;
     font-size: 1.5em;
+}
+
+.evenrow {
+    background-color: lightgray;
 }
 
 .part2 {
     display: flex;
-    margin-bottom: 20px; /* Space between top and bottom containers */
+    flex-direction: column; /* Ensure vertical stacking */
+    margin: 20px; /* Add margin for outer spacing */
 }
 
-.article1, .article2, .article3 {
-    margin: 10px;
-    padding: 20px; /* Space inside the containers */
+.firstrow, .secondrow {
+    display: flex; /* Set flex layout for rows */
+    margin-bottom: 20px; /* Add space between rows */
 }
 
-.article1 {
-    flex: 2;
-    order: 3;
-    background-color: #cce5ff;
-    border-radius: 1em; /* Rounded corners */
+.address, .links, .form, .map {
+    flex: 1; /* Each section takes equal space */
+    background-color: #cce5ff; /* Light blue background */
+    margin: 10px; /* Add margin for spacing */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 20px; /* Add padding for content */
 }
 
-.article2 {
-    flex: 1;
-    order: 2;
-    background-color: #f8f9fa; /* Background color for the second article */
-    border-radius: 1em; /* Rounded corners */
+.skillstable {
+    flex: 1; /* Ensure skillstable takes available space */
+    background-color: lightblue; /* Add background color */
+    margin: 10px; /* Add margin for spacing */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 20px; /* Add padding */
 }
 
-.article3 {
-    flex: 1;
-    order: 1;
-    background-color: #f8f9fa; /* Background color for the third article */
-    border-radius: 1em; /* Rounded corners */
-}
-
-.firstrow {
-    display: flex; /* Make this a flex container */
-    margin-bottom: 20px; /* Space between rows */
-}
-
-.skillstable, .skillsimage {
-    flex: 1; /* Allow both columns to grow equally */
-    padding: 20px; /* Space inside the containers */
-    border-radius: 1em; /* Rounded corners */
-    background-color: #e9ecef; /* Background color for both boxes */
+.skillsimage {
+    flex: 1; /* Ensure skillsimage takes available space */
+    background-color: lightyellow; /* Add background color */
+    margin: 10px; /* Add margin for spacing */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 20px; /* Add padding */
 }
 
 .skillstable table {
     margin: 0 auto; /* Center the table */
+    width: 100%; /* Make the table take full width */
+    border-collapse: collapse; /* Collapse borders */
 }
 
-.skillsimage {
-    text-align: center; /* Center the image */
+.skillstable th, .skillstable td {
+    border: 1px solid darkblue; /* Add border to table cells */
+    padding: 10px; /* Add padding inside cells */
+    text-align: center; /* Center text in cells */
+}
+
+.skillsimage img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image block */
+    margin: 0 auto; /* Center the image horizontally */
 }
