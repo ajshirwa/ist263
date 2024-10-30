@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Abdullahi Shirwa</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -14,20 +13,26 @@
             <a href="skills.html">Skills</a> | 
             <a href="contact.html">Contact</a>
         </nav>
-        <img src="../images/bio-banner.jpg" alt="Banner Image" class="responsive-image"> <!-- Added class for responsive image -->
+        <img src="../images/bio-banner.jpg" alt="Banner Image" class="responsive-image">
     </header>
 
     <main>
         <section>
             <h1>Contact Abdullahi Shirwa</h1>
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            
-            <ul>
-                <li>Hobby 1</li>
-                <li>Hobby 2</li>
-                <li>Hobby 3</li>
-            </ul>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
