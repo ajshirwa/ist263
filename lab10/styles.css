@@ -1,0 +1,123 @@
+
+/* styles.css */
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    margin: 0; /* Added to remove default margin */
+}
+
+h1, h2 {
+    color: #ff4081; /* Heading color */
+}
+
+a, a:visited {
+    color: #1a73e8; /* Link color */
+}
+
+nav {
+    background-color: #212121; /* Navigation background */
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #ffffff; /* Navigation link color */
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+/* Flexbox styles for navigation stacking */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack navigation links */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Space between stacked links */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+nav a:hover {
+    background-color: #ffb74d; /* Navigation hover */
+    color: #333333;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive image class */
+.responsive-image {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Flexbox styles for contact page layout */
+.contact-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+    margin-bottom: 20px; /* Spacing below the flex container */
+}
+
+.contact-info, .contact-form {
+    flex: 1; /* Each section takes equal space */
+    margin-right: 10px; /* Space between columns */
+}
+
+/* Prevent margin on the last column */
+.contact-form {
+    margin-right: 0; /* Removes right margin for the last column */
+}
+
+/* Zebra striping for table */
+.evenrow {
+    background-color: lightgray; /* Zebra striping */
+}
+
+/* Table styling */
+table, th, td {
+    border: 1px solid black; /* Add border to table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+th, td {
+    padding: 8px; /* Add padding */
+    text-align: left; /* Align text */
+}
+
+/* Flexbox adjustments for skills table */
+.table-container {
+    display: flex; /* Flex container for table */
+    justify-content: center; /* Center the table */
+    margin-top: 20px; /* Spacing above the table */
+}
+
+/* Additional styles for the form */
+form {
+    display: flex;
+    flex-direction: column; /* Arrange form elements in a column */
+}
+
+form label {
+    margin-bottom: 5px; /* Add space between label and input */
+}
+
+form input, form textarea, form button {
+    margin-bottom: 15px; /* Add space between form elements */
+    padding: 10px; /* Padding for input and button */
+}
+
+form button {
+    background-color: #ff4081; /* Button color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+form button:hover {
+    background-color: #ff80ab; /* Button hover color */
+}
