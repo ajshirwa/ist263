@@ -27,6 +27,20 @@ nav a {
     text-decoration: none;
 }
 
+/* Flexbox styles for navigation stacking */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack navigation links */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Space between stacked links */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
 nav a:hover {
     background-color: #ffb74d; /* Navigation hover */
     color: #333333;
@@ -34,10 +48,16 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/* Responsive image class */
+.responsive-image {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Flexbox styles for contact page layout */
 .contact-container {
     display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between columns */
+    flex-wrap: wrap; /* Allow items to wrap to next line */
     margin-bottom: 20px; /* Spacing below the flex container */
 }
 
