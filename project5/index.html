@@ -4,15 +4,9 @@
     <meta charset="utf-8">
     <title>Lab 11 - Shell Game</title>
     <style>
-        body {
-            background-color: white;
-        }
         .container {
             display: flex;
         }
-        #first { order: 1; }
-        #second { order: 2; }
-        #third { order: 3; }
         #messages {
             margin-top: 20px;
             font-size: 1.2em;
@@ -36,9 +30,7 @@
             shells.forEach(shell => container.appendChild(shell));
         }
 
-        window.onload = function() {
-            ShuffleShells(); // Ensure ShuffleShells runs after the DOM fully loads
-        };
+        window.onload = ShuffleShells;
     </script>
 </head>
 <body>
