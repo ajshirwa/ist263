@@ -25,10 +25,11 @@
         }
 
         function ShuffleShells() {
+            // Shuffle the shells randomly
             var shells = [document.getElementById("first"), document.getElementById("second"), document.getElementById("third")];
-            shells.sort(() => Math.random() - 0.5); // Shuffle shells
+            shells.sort(() => Math.random() - 0.5); // Randomly sort the shells
             for (let i = 0; i < shells.length; i++) {
-                shells[i].style.order = i + 1; // Update order to shuffle display
+                shells[i].style.order = i + 1; // Update the order based on the shuffled array
             }
         }
     </script>
