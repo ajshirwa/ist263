@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Added lang attribute -->
 <head>
     <meta charset="utf-8">
     <title>Lab 11 - Shell Game</title>
     <style>
+        body {
+            background-color: white; /* Ensure the background is not black */
+        }
         .container {
             display: flex;
         }
         #first { order: 1; }
         #second { order: 2; }
         #third { order: 3; }
+        #messages {
+            margin-top: 20px; /* Adds some space above the messages */
+            font-size: 1.2em; /* Increase font size for visibility */
+            color: blue; /* Optional: set message color */
+        }
     </style>
     <script>
         function WinnerMessage() {
@@ -21,7 +29,12 @@
         }
 
         function ShuffleShells() {
-            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 1);
+            // Shuffle all shells randomly
+            const shells = [document.getElementById("first"), document.getElementById("second"), document.getElementById("third")];
+            shells.sort(() => Math.random() - 0.5);
+            const container = document.querySelector('.container');
+            container.innerHTML = '';
+            shells.forEach(shell => container.appendChild(shell));
         }
     </script>
 </head>
