@@ -3,53 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shell Game with On-Screen Messages</title>
+    <title>Shell Game</title>
     <style>
-        .container {
-            display: flex;
-            z-index: 1; /* Ensures container is on top */
-            position: relative; /* Allows for z-index manipulation */
-        }
-
         #shellGame img {
-            width: 100px; /* Adjusts size for visibility */
-            cursor: pointer; /* Changes cursor to pointer on hover */
-            margin: 0 10px; /* Adds spacing between images */
-            z-index: 2; /* Ensures images are on top */
-            position: relative;
-        }
-
-        #messages {
-            margin-top: 20px;
-            font-weight: bold;
-            z-index: 1;
-            position: relative;
+            width: 100px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer on hover */
         }
     </style>
+</head>
+<body>
+    <h1>Find the Winning Shell!</h1>
+    <div id="shellGame">
+        <img src="../images/walnut.jpg" alt="Walnut Shell" id="shell1" onclick="TryAgain()">
+        <img src="../images/walnut.jpg" alt="Walnut Shell" id="shell2" onclick="WinnerMessage()">
+        <img src="../images/walnut.jpg" alt="Walnut Shell" id="shell3" onclick="TryAgain()">
+    </div>
+
     <script>
         function WinnerMessage() {
-            document.getElementById("messages").innerHTML = 'Congratulations! You found the winning shell!';
+            alert("Congratulations! You found the winning shell!");
         }
 
         function TryAgain() {
-            document.getElementById("messages").innerHTML = 'Wrong Shell - Try Again';
-        }
-
-        function ShuffleShells() {
-            // Randomly shuffles the order of shells
-            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 1);
-            document.getElementById("second").style.order = Math.floor((Math.random() * 3) + 1);
-            document.getElementById("third").style.order = Math.floor((Math.random() * 3) + 1);
+            alert("Sorry, try again!");
         }
     </script>
-</head>
-<body onload="ShuffleShells();">
-    <h1>Find the Winning Shell!</h1>
-    <div id="shellGame" class="container">
-        <img src="images/walnut.jpg" alt="first walnut" id="first" onclick="TryAgain();">
-        <img src="images/walnut.jpg" alt="second walnut" id="second" onclick="WinnerMessage();">
-        <img src="images/walnut.jpg" alt="third walnut" id="third" onclick="TryAgain();">
-    </div>
-    <div id="messages" style="margin-top: 20px; font-weight: bold;"></div>
 </body>
 </html>
