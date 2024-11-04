@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Lab 11 - Shell Game</title>
@@ -10,6 +10,10 @@
         #first { order: 1; }
         #second { order: 2; }
         #third { order: 3; }
+        img {
+            width: 100px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
     </style>
     <script>
         function WinnerMessage() {
@@ -21,16 +25,21 @@
         }
 
         function ShuffleShells() {
-            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 1);
+            // Shuffle the shells randomly
+            var shells = [document.getElementById("first"), document.getElementById("second"), document.getElementById("third")];
+            shells.sort(() => Math.random() - 0.5); // Randomly sort the shells
+            for (let i = 0; i < shells.length; i++) {
+                shells[i].style.order = i + 1; // Update the order based on the shuffled array
+            }
         }
     </script>
 </head>
 <body onload="ShuffleShells();">
     <h1>Choose a Walnut</h1>
     <div class="container">
-        <img src="../images/walnut.jpg" id="first" alt="first walnut" onclick="WinnerMessage();">
-        <img src="../images/walnut.jpg" id="second" alt="second walnut" onclick="TryAgain();">
-        <img src="../images/walnut.jpg" id="third" alt="third walnut" onclick="TryAgain();">
+        <img src="images/walnut.jpg" id="first" alt="first walnut" onclick="WinnerMessage();">
+        <img src="images/walnut.jpg" id="second" alt="second walnut" onclick="TryAgain();">
+        <img src="images/walnut.jpg" id="third" alt="third walnut" onclick="TryAgain();">
     </div>
     <div id="messages"></div>
 </body>
