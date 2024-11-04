@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Lab 11 - Shell Game</title>
+    <meta charset="UTF-8">
+    <title>Shell Game with On-Screen Messages</title>
     <style>
         .container {
             display: flex;
         }
-        #messages {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: blue;
-        }
+        #first { order: 1; }
+        #second { order: 2; }
+        #third { order: 3; }
     </style>
     <script>
         function WinnerMessage() {
@@ -23,22 +21,16 @@
         }
 
         function ShuffleShells() {
-            const shells = [document.getElementById("first"), document.getElementById("second"), document.getElementById("third")];
-            shells.sort(() => Math.random() - 0.5);
-            const container = document.querySelector('.container');
-            container.innerHTML = '';
-            shells.forEach(shell => container.appendChild(shell));
+            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 2);
         }
-
-        window.onload = ShuffleShells;
     </script>
 </head>
-<body>
+<body onload="ShuffleShells();">
     <h1>Choose a Walnut</h1>
     <div class="container">
-        <img src="images/walnut.jpg" id="first" alt="first walnut" onclick="WinnerMessage();">
-        <img src="images/walnut.jpg" id="second" alt="second walnut" onclick="TryAgain();">
-        <img src="images/walnut.jpg" id="third" alt="third walnut" onclick="TryAgain();">
+        <img src="../images/walnut.jpg" alt="first walnut" id="first" onclick="WinnerMessage();">
+        <img src="../images/walnut.jpg" alt="second walnut" id="second" onclick="TryAgain();">
+        <img src="../images/walnut.jpg" alt="third walnut" id="third" onclick="TryAgain();">
     </div>
     <div id="messages"></div>
 </body>
