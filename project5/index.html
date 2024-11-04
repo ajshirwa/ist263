@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Added lang attribute -->
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Lab 11 - Shell Game</title>
     <style>
         body {
-            background-color: white; /* Ensure the background is not black */
+            background-color: white;
         }
         .container {
             display: flex;
@@ -14,9 +14,9 @@
         #second { order: 2; }
         #third { order: 3; }
         #messages {
-            margin-top: 20px; /* Adds some space above the messages */
-            font-size: 1.2em; /* Increase font size for visibility */
-            color: blue; /* Optional: set message color */
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: blue;
         }
     </style>
     <script>
@@ -29,16 +29,19 @@
         }
 
         function ShuffleShells() {
-            // Shuffle all shells randomly
             const shells = [document.getElementById("first"), document.getElementById("second"), document.getElementById("third")];
             shells.sort(() => Math.random() - 0.5);
             const container = document.querySelector('.container');
             container.innerHTML = '';
             shells.forEach(shell => container.appendChild(shell));
         }
+
+        window.onload = function() {
+            ShuffleShells(); // Ensure ShuffleShells runs after the DOM fully loads
+        };
     </script>
 </head>
-<body onload="ShuffleShells();">
+<body>
     <h1>Choose a Walnut</h1>
     <div class="container">
         <img src="images/walnut.jpg" id="first" alt="first walnut" onclick="WinnerMessage();">
