@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Game</title>
+    <style>
+        #shellGame img {
+            width: 100px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Find the Winning Shell!</h1>
+    <div id="shellGame">
+        <img src="walnut_shell.png" alt="Walnut Shell" id="shell1" onclick="TryAgain()">
+        <img src="walnut_shell.png" alt="Walnut Shell" id="shell2" onclick="WinnerMessage()">
+        <img src="walnut_shell.png" alt="Walnut Shell" id="shell3" onclick="TryAgain()">
+    </div>
+
+    <script>
+        function WinnerMessage() {
+            alert("Congratulations! You found the winning shell!");
+        }
+
+        function TryAgain() {
+            alert("Sorry, try again!");
+        }
+    </script>
+</body>
+</html>
