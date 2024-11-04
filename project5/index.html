@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shell Game with On-Screen Messages</title>
     <style>
         .container {
             display: flex;
         }
-        #first { order: 1; }
-        #second { order: 2; }
-        #third { order: 3; }
+
+        #shellGame img {
+            width: 100px; /* Adjusts size for visibility */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+            margin: 0 10px; /* Adds spacing between images */
+        }
     </style>
     <script>
         function WinnerMessage() {
-            document.getElementById("messages").innerHTML = 'You Won!';
+            document.getElementById("messages").innerHTML = 'Congratulations! You found the winning shell!';
         }
 
         function TryAgain() {
@@ -21,17 +25,20 @@
         }
 
         function ShuffleShells() {
-            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 2);
+            // Randomly shuffles the order of shells
+            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 1);
+            document.getElementById("second").style.order = Math.floor((Math.random() * 3) + 1);
+            document.getElementById("third").style.order = Math.floor((Math.random() * 3) + 1);
         }
     </script>
 </head>
 <body onload="ShuffleShells();">
-    <h1>Choose a Walnut</h1>
-    <div class="container">
-        <img src="images/walnut.jpg" alt="first walnut" id="first" onclick="WinnerMessage();">
-        <img src="images/walnut.jpg" alt="second walnut" id="second" onclick="TryAgain();">
+    <h1>Find the Winning Shell!</h1>
+    <div id="shellGame" class="container">
+        <img src="images/walnut.jpg" alt="first walnut" id="first" onclick="TryAgain();">
+        <img src="images/walnut.jpg" alt="second walnut" id="second" onclick="WinnerMessage();">
         <img src="images/walnut.jpg" alt="third walnut" id="third" onclick="TryAgain();">
     </div>
-    <div id="messages"></div>
+    <div id="messages" style="margin-top: 20px; font-weight: bold;"></div>
 </body>
 </html>
