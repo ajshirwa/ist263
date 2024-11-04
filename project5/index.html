@@ -1,51 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Literacy for Students</title>
+    <meta charset="utf-8">
+    <title>Lab 11 - Shell Game</title>
     <style>
-        /* Optional CSS to remove any default border from iframe */
-        iframe {
-            border: none; /* Removes border */
+        .container {
+            display: flex;
         }
+        #first { order: 1; }
+        #second { order: 2; }
+        #third { order: 3; }
     </style>
+    <script>
+        function WinnerMessage() {
+            document.getElementById("messages").innerHTML = 'You Won!';
+        }
+
+        function TryAgain() {
+            document.getElementById("messages").innerHTML = 'Wrong Shell - Try Again';
+        }
+
+        function ShuffleShells() {
+            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 1);
+        }
+    </script>
 </head>
-<body>
-
-    <header>
-        <h1>Welcome to Financial Literacy for Students</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="expense-tracker.html">Expense Tracker</a></li>
-                <li><a href="student-loan-planner.html">Student Loan Planner</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Your Journey to Financial Literacy Starts Here</h2>
-            <p>Explore tools and resources to manage your finances effectively as a student.</p>
-
-            <section>
-                <h3>Homepage Image</h3>
-                <img src="../images/Picture1.jpg" alt="Financial concept" width="300">
-                <p>Image Credit: <a href="https://pixabay.com/photos/financial-business-accounting-1866138/">Pixabay</a> (Free to use)</p>
-            </section>
-
-            <section>
-                <h3>Watch Our Financial Tips</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/0BPcguxoubQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Check out this video for essential financial tips!</p>
-            </section>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Financial Literacy for Students. All rights reserved.</p>
-    </footer>
-
+<body onload="ShuffleShells();">
+    <h1>Choose a Walnut</h1>
+    <div class="container">
+        <img src="images/walnut.jpg" id="first" alt="first walnut" onclick="WinnerMessage();">
+        <img src="images/walnut.jpg" id="second" alt="second walnut" onclick="TryAgain();">
+        <img src="images/walnut.jpg" id="third" alt="third walnut" onclick="TryAgain();">
+    </div>
+    <div id="messages"></div>
 </body>
 </html>
