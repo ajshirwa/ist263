@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Lab 11 - Shell Game</title>
@@ -10,6 +10,10 @@
         #first { order: 1; }
         #second { order: 2; }
         #third { order: 3; }
+        img {
+            width: 100px; /* Adjust the size as needed */
+            cursor: pointer; /* Makes the images clickable */
+        }
     </style>
     <script>
         function WinnerMessage() {
@@ -21,7 +25,13 @@
         }
 
         function ShuffleShells() {
-            document.getElementById("first").style.order = Math.floor((Math.random() * 3) + 1);
+            let shells = [document.getElementById("first"), document.getElementById("second"), document.getElementById("third")];
+            let randomOrder = [1, 2, 3].sort(() => Math.random() - 0.5); // Randomly shuffles the order
+
+            // Apply the new order to the images
+            shells[0].style.order = randomOrder[0];
+            shells[1].style.order = randomOrder[1];
+            shells[2].style.order = randomOrder[2];
         }
     </script>
 </head>
