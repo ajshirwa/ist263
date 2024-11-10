@@ -9,12 +9,18 @@
             width: 100px; /* Adjust size as needed */
             cursor: pointer; /* Change cursor to pointer on hover */
         }
+        .container {
+            display: flex;
+        }
+        #first { order: 1; }
+        #second { order: 2; }
+        #third { order: 3; }
     </style>
 </head>
-<body>
+<body onload="ShuffleShells();">
     <h1>Choose a Walnut</h1>
-    <div id="shellGame">
-        <!-- Updated image path to point to the walnut.jpg in the current folder -->
+    <div class="container">
+        <!-- Ensure the correct path to walnut.jpg -->
         <img src="walnut.jpg" alt="first walnut" id="first" onclick="TryAgain();">
         <img src="walnut.jpg" alt="second walnut" id="second" onclick="WinnerMessage();">
         <img src="walnut.jpg" alt="third walnut" id="third" onclick="TryAgain();">
@@ -41,6 +47,5 @@
             shells[2].style.order = randomOrder[2];
         }
     </script>
-
 </body>
 </html>
