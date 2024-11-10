@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Lab 11 - Shell Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Game</title>
     <style>
-        .container {
-            display: flex;
-        }
-        #first { order: 1; }
-        #second { order: 2; }
-        #third { order: 3; }
-        img {
-            width: 100px; /* Adjust the size as needed */
-            cursor: pointer; /* Makes the images clickable */
+        #shellGame img {
+            width: 100px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer on hover */
         }
     </style>
+</head>
+<body>
+    <h1>Choose a Walnut</h1>
+    <div id="shellGame">
+        <!-- Updated image path to point to the walnut.jpg in the current folder -->
+        <img src="walnut.jpg" alt="first walnut" id="first" onclick="TryAgain();">
+        <img src="walnut.jpg" alt="second walnut" id="second" onclick="WinnerMessage();">
+        <img src="walnut.jpg" alt="third walnut" id="third" onclick="TryAgain();">
+    </div>
+
+    <div id="messages"></div>
+
     <script>
         function WinnerMessage() {
             document.getElementById("messages").innerHTML = 'You Won!';
@@ -34,14 +41,6 @@
             shells[2].style.order = randomOrder[2];
         }
     </script>
-</head>
-<body onload="ShuffleShells();">
-    <h1>Choose a Walnut</h1>
-    <div class="container">
-        <img src="lab11/walnut.jpg" id="first" alt="first walnut" onclick="WinnerMessage();">
-        <img src="lab11/walnut.jpg" id="second" alt="second walnut" onclick="TryAgain();">
-        <img src="lab11/walnut.jpg" id="third" alt="third walnut" onclick="TryAgain();">
-    </div>
-    <div id="messages"></div>
+
 </body>
 </html>
