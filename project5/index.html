@@ -3,30 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shell Game</title>
-    <style>
-        #shellGame img {
-            width: 100px; /* Adjust size as needed */
-            cursor: pointer; /* Change cursor to pointer on hover */
-        }
-    </style>
+    <title>Home Page - Financial Literacy</title>
 </head>
 <body>
-    <h1>Find the Winning Shell!</h1>
-    <div id="shellGame">
-        <img src="images/walnut.jpg" alt="Walnut Shell" id="shell1" onclick="TryAgain()">
-        <img src="images/walnut.jpg" alt="Walnut Shell" id="shell2" onclick="WinnerMessage()">
-        <img src="images/walnut.jpg" alt="Walnut Shell" id="shell3" onclick="TryAgain()">
-    </div>
 
-    <script>
-        function WinnerMessage() {
-            alert("Congratulations! You found the winning shell!");
-        }
+    <header>
+        <h1>Visual Representation of Financial Literacy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        function TryAgain() {
-            alert("Sorry, try again!");
-        }
-    </script>
+    <main>
+        <section>
+            <h2>Are you ready to take control of your finances?</h2>
+            <p>Managing your money as a student can be overwhelming, but it's an important step toward achieving financial independence. With our tools and resources, you can easily track expenses and create a plan for student loan repayment.</p>
+            
+            <div>
+                <p><strong>Explore our tools:</strong></p>
+                <ul>
+                    <li><a href="expense-tracker.html">Expense Tracker</a></li>
+                    <li><a href="student-loan-planner.html">Student Loan Planner</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p><strong>Sign up or sign in to get started:</strong></p>
+                <a href="signup.html">Sign Up</a> | <a href="signin.html">Sign In</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Website. All rights reserved.</p>
+        <p><a href="additional-resources.html">Additional resources available</a></p>
+    </footer>
+
 </body>
 </html>
