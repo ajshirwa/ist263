@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Slideshow</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #slideshow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #planetImage {
+            width: 300px;
+            height: auto;
+        }
+
+        #planetInfo {
+            max-width: 500px;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .planetThumbnails {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .planetThumbnails img {
+            width: 70px;
+            height: auto;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Planet Slideshow</h1>
+
+    <div id="slideshow">
+        <!-- Display the Mercury image and text by default -->
+        <img src="mercury.jpeg" alt="Mercury" id="planetImage">
+        <div id="planetInfo">
+            <h2 id="planetName">Mercury</h2>
+            <p id="planetDescription">Mercury is the closest planet to the Sun and the smallest in the Solar System. It has a very thin atmosphere.</p>
+        </div>
+    </div>
+
+    <!-- Planet thumbnails for selection -->
+    <div class="planetThumbnails">
+        <img src="mercury_thumb.jpeg" alt="Mercury" onclick="showMercury()">
+        <img src="venus_thumb.jpeg" alt="Venus" onclick="showVenus()">
+        <img src="earth_thumb.jpeg" alt="Earth" onclick="showEarth()">
+        <img src="mars_thumb.jpeg" alt="Mars" onclick="showMars()">
+        <img src="jupiter_thumb.jpeg" alt="Jupiter" onclick="showJupiter()">
+        <img src="saturn_thumb.jpeg" alt="Saturn" onclick="showSaturn()">
+        <img src="uranus_thumb.jpeg" alt="Uranus" onclick="showUranus()">
+        <img src="neptune_thumb.jpeg" alt="Neptune" onclick="showNeptune()">
+    </div>
+
+    <script>
+        // Function to turn off all planets
+        function PlanetsOff() {
+            // Hides all the planet images and text
+            document.getElementById('planetImage').classList.add('hidden');
+            document.getElementById('planetInfo').classList.add('hidden');
+        }
+
+        // Function to show Mercury
+        function showMercury() {
+            PlanetsOff();
+            document.getElementById('planetImage').src = 'mercury.jpeg';
+            document.getElementById('planetName').innerText = 'Mercury';
+            document.getElementById('planetDescription').innerText = 'Mercury is the closest planet to the Sun and the smallest in the Solar System. It has a very thin atmosphere.';
+            document.getElementById('planetImage').classList.remove('hidden');
+            document.getElementById('planetInfo').classList.remove('hidden');
+        }
+
+        // Function to show Venus
+        function showVenus() {
+            PlanetsOff();
+            document.getElementById('planetImage').src = 'venus.jpeg';
+            document.getElementById('planetName').innerText = 'Venus';
+            document.getElementById('planetDescription').innerText = 'Venus is the second planet from the Sun and has a dense atmosphere rich in carbon dioxide.';
+            document.getElementById('planetImage').classList.remove('hidden');
+            document.getElementById('planetInfo').classList.remove('hidden');
+        }
+
+        // Similar functions for other planets...
+        function showEarth() { /* Similar to showMercury */ }
+        function showMars() { /* Similar to showMercury */ }
+        function showJupiter() { /* Similar to showMercury */ }
+        function showSaturn() { /* Similar to showMercury */ }
+        function showUranus() { /* Similar to showMercury */ }
+        function showNeptune() { /* Similar to showMercury */ }
+    </script>
+
+</body>
+</html>
