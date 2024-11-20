@@ -25,21 +25,18 @@
             margin-bottom: 20px;
         }
 
-        #main-display img {
-            max-width: 300px;
+        #main-display img,
+        #main-display div {
+            float: left;
             margin-right: 20px;
         }
 
-        #main-display div {
-            max-width: 300px;
-            text-align: left;
-        }
-
         #thumbnails {
+            clear: both;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 10px;
+            margin-top: 20px;
         }
 
         #thumbnails img {
@@ -47,10 +44,12 @@
             cursor: pointer;
         }
 
+        /* Initially hide all planet images and info */
         img, div {
             display: none;
         }
 
+        /* Display Mercury initially */
         #mercury,
         #mercuryinfo {
             display: block;
@@ -116,6 +115,7 @@
     <script>
         /* JavaScript Functions */
         function PlanetsOff() {
+            // Hide all planet images and their info sections
             document.getElementById('mercury').style.display = 'none';
             document.getElementById('mercuryinfo').style.display = 'none';
             document.getElementById('venus').style.display = 'none';
@@ -138,37 +138,30 @@
             document.getElementById('mercury').style.display = 'block';
             document.getElementById('mercuryinfo').style.display = 'block';
         }
-
         function VenusOn() {
             document.getElementById('venus').style.display = 'block';
             document.getElementById('venusinfo').style.display = 'block';
         }
-
         function EarthOn() {
             document.getElementById('earth').style.display = 'block';
             document.getElementById('earthinfo').style.display = 'block';
         }
-
         function MarsOn() {
             document.getElementById('mars').style.display = 'block';
             document.getElementById('marsinfo').style.display = 'block';
         }
-
         function JupiterOn() {
             document.getElementById('jupiter').style.display = 'block';
             document.getElementById('jupiterinfo').style.display = 'block';
         }
-
         function SaturnOn() {
             document.getElementById('saturn').style.display = 'block';
             document.getElementById('saturninfo').style.display = 'block';
         }
-
         function UranusOn() {
             document.getElementById('uranus').style.display = 'block';
             document.getElementById('uranusinfo').style.display = 'block';
         }
-
         function NeptuneOn() {
             document.getElementById('neptune').style.display = 'block';
             document.getElementById('neptuneinfo').style.display = 'block';
