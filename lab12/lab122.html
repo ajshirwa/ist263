@@ -47,25 +47,13 @@
             cursor: pointer;
         }
 
-        /* Initially hide all planet images and info */
         img, div {
             display: none;
         }
 
-        /* Display Mercury initially */
         #mercury,
         #mercuryinfo {
             display: block;
-        }
-
-        /* Additional styling for floats */
-        #main-display {
-            float: left;
-        }
-
-        #thumbnails {
-            clear: both;
-            display: inline-block;
         }
     </style>
 </head>
@@ -128,7 +116,6 @@
     <script>
         /* JavaScript Functions */
         function PlanetsOff() {
-            // Hide all planet images and their info sections
             document.getElementById('mercury').style.display = 'none';
             document.getElementById('mercuryinfo').style.display = 'none';
             document.getElementById('venus').style.display = 'none';
