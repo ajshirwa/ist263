@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Slideshow</title>
     <style>
+        /* CSS for the layout and styling */
         body {
             font-family: Arial, sans-serif;
         }
@@ -17,12 +18,18 @@
         }
 
         .planet-info {
-            display: none;
+            float: left;
+            margin-left: 20px;
             width: 300px;
+            display: none;
         }
 
-        .planet-info img {
-            width: 100%;
+        .planet-info h2 {
+            font-size: 24px;
+        }
+
+        .planet-info p {
+            font-size: 18px;
         }
 
         .planet-thumbnail {
@@ -31,18 +38,18 @@
         }
 
         /* Initially hide all planets */
-        .planet-info {
+        #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune {
             display: none;
+        }
+
+        /* Add transition effect for smooth display changes */
+        #planets img {
+            width: 100px;
+            height: auto;
         }
 
         #planet-info {
             clear: both;
-        }
-
-        /* Layout adjustments */
-        #planets img {
-            width: 100px;
-            height: auto;
         }
     </style>
 </head>
@@ -50,55 +57,55 @@
     <h1>Planet Slideshow</h1>
     <div id="planets">
         <!-- Thumbnails for the planets -->
-        <img src="mercury_thumb.jpeg" alt="Mercury" id="mercurythumb" class="planet-thumbnail" onclick="PlanetsOff(); MercuryOn();">
-        <img src="venus_thumb.jpeg" alt="Venus" id="venusthumb" class="planet-thumbnail" onclick="PlanetsOff(); VenusOn();">
-        <img src="earth_thumb.jpeg" alt="Earth" id="earththumb" class="planet-thumbnail" onclick="PlanetsOff(); EarthOn();">
-        <img src="mars_thumb.jpeg" alt="Mars" id="marsthumb" class="planet-thumbnail" onclick="PlanetsOff(); MarsOn();">
-        <img src="jupiter_thumb.jpeg" alt="Jupiter" id="jupitthumb" class="planet-thumbnail" onclick="PlanetsOff(); JupiterOn();">
-        <img src="saturn_thumb.jpeg" alt="Saturn" id="saturnthumb" class="planet-thumbnail" onclick="PlanetsOff(); SaturnOn();">
-        <img src="uranus_thumb.jpeg" alt="Uranus" id="uranusthumb" class="planet-thumbnail" onclick="PlanetsOff(); UranusOn();">
-        <img src="neptune_thumb.jpeg" alt="Neptune" id="neptunethumb" class="planet-thumbnail" onclick="PlanetsOff(); NeptuneOn();">
+        <img src="images/mercury.jpg" alt="Mercury" id="mercurythumb" class="planet-thumbnail" onclick="PlanetsOff(); MercuryOn();">
+        <img src="images/venus.jpg" alt="Venus" id="venusthumb" class="planet-thumbnail" onclick="PlanetsOff(); VenusOn();">
+        <img src="images/earth.jpg" alt="Earth" id="earththumb" class="planet-thumbnail" onclick="PlanetsOff(); EarthOn();">
+        <img src="images/mars.jpg" alt="Mars" id="marsthumb" class="planet-thumbnail" onclick="PlanetsOff(); MarsOn();">
+        <img src="images/jupiter.jpg" alt="Jupiter" id="jupitthumb" class="planet-thumbnail" onclick="PlanetsOff(); JupiterOn();">
+        <img src="images/saturn.jpg" alt="Saturn" id="saturnthumb" class="planet-thumbnail" onclick="PlanetsOff(); SaturnOn();">
+        <img src="images/uranus.jpg" alt="Uranus" id="uranusthumb" class="planet-thumbnail" onclick="PlanetsOff(); UranusOn();">
+        <img src="images/neptune.jpg" alt="Neptune" id="neptunethumb" class="planet-thumbnail" onclick="PlanetsOff(); NeptuneOn();">
     </div>
 
     <div id="planet-info">
         <!-- Large planet images and text -->
         <div id="mercury" class="planet-info">
-            <img src="mercury.jpeg" alt="Mercury" />
+            <img src="images/mercury.jpg" alt="Mercury" />
             <h2>Mercury</h2>
             <p>Mercury is the closest planet to the Sun and the smallest in the Solar System.</p>
         </div>
         <div id="venus" class="planet-info">
-            <img src="venus.jpeg" alt="Venus" />
+            <img src="images/venus.jpg" alt="Venus" />
             <h2>Venus</h2>
             <p>Venus is the second planet from the Sun and is similar in size and composition to Earth.</p>
         </div>
         <div id="earth" class="planet-info">
-            <img src="earth.jpeg" alt="Earth" />
+            <img src="images/earth.jpg" alt="Earth" />
             <h2>Earth</h2>
             <p>Earth is the third planet from the Sun and the only known planet to support life.</p>
         </div>
         <div id="mars" class="planet-info">
-            <img src="mars.jpeg" alt="Mars" />
+            <img src="images/mars.jpg" alt="Mars" />
             <h2>Mars</h2>
             <p>Mars is the fourth planet from the Sun and is often called the Red Planet.</p>
         </div>
         <div id="jupiter" class="planet-info">
-            <img src="jupiter.jpeg" alt="Jupiter" />
+            <img src="images/jupiter.jpg" alt="Jupiter" />
             <h2>Jupiter</h2>
             <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</p>
         </div>
         <div id="saturn" class="planet-info">
-            <img src="saturn.jpeg" alt="Saturn" />
+            <img src="images/saturn.jpg" alt="Saturn" />
             <h2>Saturn</h2>
             <p>Saturn is the sixth planet from the Sun, known for its iconic ring system.</p>
         </div>
         <div id="uranus" class="planet-info">
-            <img src="uranus.jpeg" alt="Uranus" />
+            <img src="images/uranus.jpg" alt="Uranus" />
             <h2>Uranus</h2>
             <p>Uranus is the seventh planet from the Sun and has a unique sideways rotation.</p>
         </div>
         <div id="neptune" class="planet-info">
-            <img src="neptune.jpeg" alt="Neptune" />
+            <img src="images/neptune.jpg" alt="Neptune" />
             <h2>Neptune</h2>
             <p>Neptune is the eighth planet from the Sun and is known for its intense blue color.</p>
         </div>
@@ -146,10 +153,8 @@
             document.getElementById('neptune').style.display = 'block';
         }
 
-        // Display Mercury by default when the page loads
-        window.onload = function() {
-            MercuryOn();
-        };
+        // Initialize with Mercury showing
+        MercuryOn();
     </script>
 </body>
 </html>
