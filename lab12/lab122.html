@@ -5,157 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Slideshow</title>
     <style>
-        /* CSS for the layout and styling */
+        /* CSS */
         body {
             font-family: Arial, sans-serif;
-        }
-
-        #planets {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Container for images and text */
+        .planet-container {
+            display: flex;
+            justify-content: center;
             margin-top: 20px;
         }
 
-        .planet-info {
-            float: left;
-            margin-left: 20px;
+        /* Floating images */
+        .planet-image {
             width: 300px;
+            margin-right: 20px;
+            cursor: pointer;
+            float: left;
+        }
+
+        /* Text display */
+        .planet-info {
             display: none;
+            max-width: 500px;
+            float: left;
         }
 
         .planet-info h2 {
             font-size: 24px;
+            margin-bottom: 10px;
         }
 
         .planet-info p {
-            font-size: 18px;
+            font-size: 16px;
         }
 
-        .planet-thumbnail {
-            cursor: pointer;
-            margin: 10px;
+        /* Initial display of Mercury */
+        #mercury, #mercuryinfo {
+            display: block;
         }
 
-        /* Initially hide all planets except Mercury */
-        #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune {
-            display: none;
-        }
-
-        /* Add transition effect for smooth display changes */
-        #planets img {
-            width: 100px;
-            height: auto;
-        }
-
-        /* Clear floats after planet info */
-        #planet-info {
+        /* Clearfix for the floating elements */
+        .planet-container:after {
+            content: "";
+            display: block;
             clear: both;
+        }
+
+        /* Styling for the planet thumbnail images */
+        .planet-thumbs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .planet-thumbs img {
+            width: 100px;
+            margin: 0 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>Planet Slideshow</h1>
-    <div id="planets">
-        <!-- Thumbnails for the planets -->
-        <img src="mercury_thumb.jpg" alt="Mercury" id="mercurythumb" class="planet-thumbnail" onclick="PlanetsOff(); MercuryOn();">
-        <img src="venus_thumb.jpg" alt="Venus" id="venusthumb" class="planet-thumbnail" onclick="PlanetsOff(); VenusOn();">
-        <img src="earth_thumb.jpg" alt="Earth" id="earththumb" class="planet-thumbnail" onclick="PlanetsOff(); EarthOn();">
-        <img src="mars_thumb.jpg" alt="Mars" id="marsthumb" class="planet-thumbnail" onclick="PlanetsOff(); MarsOn();">
-        <img src="jupiter_thumb.jpg" alt="Jupiter" id="jupitthumb" class="planet-thumbnail" onclick="PlanetsOff(); JupiterOn();">
-        <img src="saturn_thumb.jpg" alt="Saturn" id="saturnthumb" class="planet-thumbnail" onclick="PlanetsOff(); SaturnOn();">
-        <img src="uranus_thumb.jpg" alt="Uranus" id="uranusthumb" class="planet-thumbnail" onclick="PlanetsOff(); UranusOn();">
-        <img src="neptune_thumb.jpg" alt="Neptune" id="neptunethumb" class="planet-thumbnail" onclick="PlanetsOff(); NeptuneOn();">
+
+    <!-- Thumbnail Images -->
+    <div class="planet-thumbs">
+        <img src="mercury.jpg" alt="Mercury" id="mercurythumb" onclick="planetsOff(); mercuryOn();">
+        <img src="venus.jpg" alt="Venus" id="venusthumb" onclick="planetsOff(); venusOn();">
+        <img src="earth.jpg" alt="Earth" id="earththumb" onclick="planetsOff(); earthOn();">
+        <img src="mars.jpg" alt="Mars" id="marsthumb" onclick="planetsOff(); marsOn();">
+        <img src="jupiter.jpg" alt="Jupiter" id="jupitermthumb" onclick="planetsOff(); jupiterOn();">
+        <img src="saturn.jpg" alt="Saturn" id="saturnthumb" onclick="planetsOff(); saturnOn();">
+        <img src="uranus.jpg" alt="Uranus" id="uranusthumb" onclick="planetsOff(); uranusOn();">
+        <img src="neptune.jpg" alt="Neptune" id="neptunethumb" onclick="planetsOff(); neptuneOn();">
     </div>
 
-    <div id="planet-info">
-        <!-- Large planet images and text -->
-        <div id="mercury" class="planet-info">
-            <img src="mercury.jpg" alt="Mercury" />
+    <!-- Planet Images and Info -->
+    <div class="planet-container">
+        <div id="mercury" class="planet-image">
+            <img src="mercury.jpg" alt="Mercury">
+        </div>
+        <div id="mercuryinfo" class="planet-info">
             <h2>Mercury</h2>
-            <p>Mercury is the closest planet to the Sun and the smallest in the Solar System.</p>
+            <p>Mercury is the smallest planet in our solar system and the closest to the Sun.</p>
         </div>
-        <div id="venus" class="planet-info">
-            <img src="venus.jpg" alt="Venus" />
+
+        <div id="venus" class="planet-image" style="display: none;">
+            <img src="venus.jpg" alt="Venus">
+        </div>
+        <div id="venusinfo" class="planet-info" style="display: none;">
             <h2>Venus</h2>
-            <p>Venus is the second planet from the Sun and is similar in size and composition to Earth.</p>
+            <p>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</p>
         </div>
-        <div id="earth" class="planet-info">
-            <img src="earth.jpg" alt="Earth" />
+
+        <div id="earth" class="planet-image" style="display: none;">
+            <img src="earth.jpg" alt="Earth">
+        </div>
+        <div id="earthinfo" class="planet-info" style="display: none;">
             <h2>Earth</h2>
             <p>Earth is the third planet from the Sun and the only known planet to support life.</p>
         </div>
-        <div id="mars" class="planet-info">
-            <img src="mars.jpg" alt="Mars" />
+
+        <div id="mars" class="planet-image" style="display: none;">
+            <img src="mars.jpg" alt="Mars">
+        </div>
+        <div id="marsinfo" class="planet-info" style="display: none;">
             <h2>Mars</h2>
-            <p>Mars is the fourth planet from the Sun and is often called the Red Planet.</p>
+            <p>Mars is the fourth planet from the Sun and is often called the "Red Planet" due to its reddish appearance.</p>
         </div>
-        <div id="jupiter" class="planet-info">
-            <img src="jupiter.jpg" alt="Jupiter" />
+
+        <div id="jupiter" class="planet-image" style="display: none;">
+            <img src="jupiter.jpg" alt="Jupiter">
+        </div>
+        <div id="jupiterinfo" class="planet-info" style="display: none;">
             <h2>Jupiter</h2>
-            <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</p>
+            <p>Jupiter is the largest planet in our solar system and is known for its Great Red Spot.</p>
         </div>
-        <div id="saturn" class="planet-info">
-            <img src="saturn.jpg" alt="Saturn" />
+
+        <div id="saturn" class="planet-image" style="display: none;">
+            <img src="saturn.jpg" alt="Saturn">
+        </div>
+        <div id="saturninfo" class="planet-info" style="display: none;">
             <h2>Saturn</h2>
-            <p>Saturn is the sixth planet from the Sun, known for its iconic ring system.</p>
+            <p>Saturn is the sixth planet from the Sun and is famous for its spectacular ring system.</p>
         </div>
-        <div id="uranus" class="planet-info">
-            <img src="uranus.jpg" alt="Uranus" />
+
+        <div id="uranus" class="planet-image" style="display: none;">
+            <img src="uranus.jpg" alt="Uranus">
+        </div>
+        <div id="uranusinfo" class="planet-info" style="display: none;">
             <h2>Uranus</h2>
-            <p>Uranus is the seventh planet from the Sun and has a unique sideways rotation.</p>
+            <p>Uranus is the seventh planet from the Sun and is unique because it rotates on its side.</p>
         </div>
-        <div id="neptune" class="planet-info">
-            <img src="neptune.jpg" alt="Neptune" />
+
+        <div id="neptune" class="planet-image" style="display: none;">
+            <img src="neptune.jpg" alt="Neptune">
+        </div>
+        <div id="neptuneinfo" class="planet-info" style="display: none;">
             <h2>Neptune</h2>
-            <p>Neptune is the eighth planet from the Sun and is known for its intense blue color.</p>
+            <p>Neptune is the eighth and farthest planet from the Sun and is known for its deep blue color.</p>
         </div>
     </div>
 
     <script>
-        // JavaScript functions to handle the slideshow
-        function PlanetsOff() {
-            // Hide all planets and their associated info
-            var planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
-            for (var i = 0; i < planets.length; i++) {
-                document.getElementById(planets[i]).style.display = 'none';
-            }
+        // JavaScript
+
+        // Function to hide all planets and their information
+        function planetsOff() {
+            const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+            const planetInfos = ['mercuryinfo', 'venusinfo', 'earthinfo', 'marsinfo', 'jupiterinfo', 'saturninfo', 'uranusinfo', 'neptuneinfo'];
+
+            // Hide all planets and info
+            planets.forEach(function(planet) {
+                document.getElementById(planet).style.display = 'none';
+            });
+
+            planetInfos.forEach(function(info) {
+                document.getElementById(info).style.display = 'none';
+            });
         }
 
-        function MercuryOn() {
+        // Function to display Mercury
+        function mercuryOn() {
             document.getElementById('mercury').style.display = 'block';
+            document.getElementById('mercuryinfo').style.display = 'block';
         }
 
-        function VenusOn() {
+        // Function to display Venus
+        function venusOn() {
             document.getElementById('venus').style.display = 'block';
+            document.getElementById('venusinfo').style.display = 'block';
         }
 
-        function EarthOn() {
+        // Function to display Earth
+        function earthOn() {
             document.getElementById('earth').style.display = 'block';
+            document.getElementById('earthinfo').style.display = 'block';
         }
 
-        function MarsOn() {
+        // Function to display Mars
+        function marsOn() {
             document.getElementById('mars').style.display = 'block';
+            document.getElementById('marsinfo').style.display = 'block';
         }
 
-        function JupiterOn() {
+        // Function to display Jupiter
+        function jupiterOn() {
             document.getElementById('jupiter').style.display = 'block';
+            document.getElementById('jupiterinfo').style.display = 'block';
         }
 
-        function SaturnOn() {
+        // Function to display Saturn
+        function saturnOn() {
             document.getElementById('saturn').style.display = 'block';
+            document.getElementById('saturninfo').style.display = 'block';
         }
 
-        function UranusOn() {
+        // Function to display Uranus
+        function uranusOn() {
             document.getElementById('uranus').style.display = 'block';
+            document.getElementById('uranusinfo').style.display = 'block';
         }
 
-        function NeptuneOn() {
+        // Function to display Neptune
+        function neptuneOn() {
             document.getElementById('neptune').style.display = 'block';
+            document.getElementById('neptuneinfo').style.display = 'block';
         }
-
-        // Initialize with Mercury showing
-        MercuryOn();
     </script>
 </body>
 </html>
