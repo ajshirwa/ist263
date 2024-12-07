@@ -1,6 +1,6 @@
 /* Basic Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Google Font applied */
     font-size: 1rem; /* Relative unit for font size */
     line-height: 1.6;
     margin: 0;
@@ -72,3 +72,6 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
