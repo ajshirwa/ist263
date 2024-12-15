@@ -84,9 +84,9 @@ main {
 
 .tool-item img {
     margin-right: 20px;
-    width: 4rem; /* Increase the size of images */
-    height: 4rem; /* Keep the aspect ratio consistent */
-    object-fit: contain; /* Make sure images don't stretch */
+    width: 100px; /* Significantly larger size */
+    height: 100px; /* Consistent height to match width */
+    object-fit: contain; /* Prevent stretching */
 }
 
 .expense-tracker .tracker-image, .student-loan-planner .loan-image {
@@ -95,8 +95,8 @@ main {
 }
 
 .expense-image, .loan-img {
-    width: 4rem; /* Increased image size */
-    height: 4rem; /* Increased image size */
+    width: 100px; /* Significantly larger size */
+    height: 100px; /* Consistent height */
     object-fit: contain; /* Prevent stretching */
 }
 
