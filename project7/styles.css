@@ -23,9 +23,9 @@ a:hover {
 
 /* Skip to content link */
 .skip-link {
-    position: absolute;
+    position: fixed;  /* Changed from absolute to fixed */
     top: 0;
-    right: 0; /* Move to the far right */
+    right: 0; /* Ensure it is positioned on the far right */
     background-color: #000;
     color: #fff;
     padding: 10px;
