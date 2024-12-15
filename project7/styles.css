@@ -5,192 +5,102 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #A3CEEB; /* Light background color with good contrast */
-    color: #000000; /* Black text for high contrast */
+    background-color: #A3CEEB;
+    color: #000000;
 }
 
 h1, h2, h3, p {
-    color: #000000; /* Dark text for good contrast */
+    color: #000000;
 }
 
-/* Links - Ensuring dark color for all navigation links */
 a {
-    color: #000000; /* Dark black text for links */
+    color: #000000;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #8000FF; /* Dark purple for hover/focus */
+    color: #8000FF;
     text-decoration: underline;
 }
 
-/* Skip to Content Link */
 .skip-link {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333333; /* Dark background for high contrast */
-    color: #ffffff; /* White text */
+    background-color: #333333;
+    color: #ffffff;
     padding: 10px;
     z-index: 999;
-    clip: rect(1px, 1px, 1px, 1px); /* Hides the link */
+    clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     width: 1px;
     overflow: hidden;
 }
 
-/* Make the "Skip to Content" link visible when focused */
 .skip-link:focus {
-    clip: auto; /* Unhides the link */
+    clip: auto;
     height: auto;
     width: auto;
-    background-color: #555555; /* Lighter dark background on focus */
+    background-color: #555555;
 }
 
 /* Header Styles */
 header {
-    background-color: #ffffff; /* White background for contrast */
-    color: #000000; /* Black text */
-    padding: 15px;
-    border-bottom: 3px solid #000000; /* Dark border for separation */
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    text-align: center;
 }
 
-header nav ul {
+nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Main Section Styles */
+main {
+    padding: 40px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.intro, .tools, .signup, .learn, .student-loan-planner {
+    margin-bottom: 40px;
+}
+
+.tools, .signup, .learn {
+    padding-top: 20px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+}
+
+.tool-item img {
+    margin-right: 20px;
+    max-width: 150px;
+}
+
+.expense-tracker .tracker-image, .student-loan-planner .loan-image {
     display: inline-block;
     margin-right: 20px;
 }
 
-header nav ul li a {
-    font-weight: bold;
-    color: #000000; /* Ensure black color for all header links */
-}
-
-header nav ul li a:hover, header nav ul li a:focus {
-    color: #8000FF; /* Dark purple on hover/focus for visibility */
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-}
-
-h1, h2, h3 {
-    margin-bottom: 10px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-/* Expense Tracker Table */
-#expense-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-
-#expense-table th, #expense-table td {
-    border: 1px solid #dddddd;
-    padding: 12px;
-    text-align: left;
-}
-
-#expense-table th {
-    background-color: #1C2833; /* Dark background for header */
-    color: white;
-}
-
-#expense-table td {
-    background-color: #f9f9f9; /* Light background for table data */
-}
-
-#expense-table td button {
-    background-color: #E74C3C; /* Red background for delete buttons */
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#expense-table td button:hover {
-    background-color: #C0392B; /* Darker red on hover */
-}
-
-/* Add Expense Button */
-button {
-    background-color: #3498DB; /* Blue background */
-    color: #000000 !important; /* Black text for better contrast */
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 12px;
-    border-radius: 5px;
-    text-decoration: none; /* Removed underline */
-}
-
-button:hover {
-    background-color: #2980B9; /* Darker blue on hover */
-    color: #000000 !important; /* Ensure text stays black on hover */
+.expense-image, .loan-img {
+    width: 150px;
+    height: auto;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Black text */
+    background-color: #333333;
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
-    border-top: 3px solid #000000; /* Dark top border for footer separation */
-}
-
-/* Form and Button Styles */
-input, button {
-    font-size: 1rem;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-input[type="text"], input[type="number"], select {
-    width: 100%;
-    max-width: 300px;
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    margin-top: 10px;
-}
-
-/* Tables and Forms (General) */
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-
-th {
-    background-color: #2C3E50; /* Dark background for headers */
-    color: #FFFFFF; /* White text in headers */
-}
-
-td {
-    background-color: #F7F7F7; /* Light background for data cells */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header nav ul {
-        display: block;
-        text-align: center;
-    }
-
-    header nav ul li {
-        margin: 5px 0;
-    }
+    padding: 10px;
 }
