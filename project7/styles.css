@@ -103,15 +103,15 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #FFFFFF; /* White background for high contrast */
-    color: #000000; /* Black text for footer (high contrast with white) */
+    background-color: #333333; /* Dark background for the footer */
+    color: #EDEDED; /* Light gray text for high contrast */
     text-align: center;
     padding: 20px; /* Increased padding for better readability */
     font-size: 1.1rem; /* Slightly larger font for footer text */
 }
 
 footer a {
-    color: #000000; /* Ensuring the footer link is visible */
+    color: #EDEDED; /* Lighter color for footer links */
 }
 
 footer a:hover {
@@ -121,5 +121,5 @@ footer a:hover {
 /* Additional Accessibility Improvements */
 footer p {
     font-size: 1rem; /* Clear font size for easy reading */
-    color: #000000; /* Ensures text is readable on white background */
+    color: #EDEDED; /* Ensures text is readable on dark background */
 }
