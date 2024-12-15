@@ -84,21 +84,37 @@ main {
 
 .tool-item img {
     margin-right: 20px;
-    width: 100px; /* Significantly larger size for the images */
-    height: 100px; /* Matching height to maintain aspect ratio */
+    width: 80px; /* Adjusted smaller size for the images */
+    height: 80px; /* Matching height to maintain aspect ratio */
     object-fit: contain; /* Prevents stretching */
+    border: 2px solid #ccc; /* Adding border around the image */
+    padding: 5px; /* Padding inside the box */
+    background-color: #fff; /* Light background to contrast image */
+    border-radius: 5px; /* Rounded corners for a softer look */
 }
 
-/* Ensuring better contrast between images and content */
+/* Wrapper for the images to provide better structure */
+.image-wrapper {
+    display: inline-block; /* Makes the image behave like a block */
+    margin: 10px; /* Spacing around the image box */
+    text-align: center; /* Center the image within the box */
+    width: auto; /* Keeps the image box size flexible */
+}
+
+/* Expense Tracker and Student Loan Planner Specific Styles */
 .expense-tracker .tracker-image, .student-loan-planner .loan-image {
     display: inline-block;
     margin-right: 20px;
 }
 
 .expense-image, .loan-img {
-    width: 100px; /* Larger image size */
-    height: 100px; /* Consistent height for aspect ratio */
+    width: 80px; /* Smaller image size */
+    height: 80px; /* Consistent height for aspect ratio */
     object-fit: contain;
+    border: 2px solid #ccc; /* Border around the image */
+    padding: 5px; /* Padding inside the box */
+    background-color: #fff; /* Light background to contrast image */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Footer Styles */
