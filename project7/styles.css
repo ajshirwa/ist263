@@ -9,11 +9,11 @@ body {
 }
 
 h1, h2, h3 {
-    color: #1c2833; /* Darker shade for better contrast */
+    color: #000000; /* Dark black text for high contrast */
 }
 
 a {
-    color: #1565c0; /* Increased contrast for links */
+    color: #000000; /* Dark black links for better contrast */
     text-decoration: none;
 }
 
@@ -26,21 +26,21 @@ a:hover {
     position: fixed;  
     top: 0;
     left: 0;
-    background-color: #0a3d62; /* Darker background for better contrast */
-    color: #fff;
+    background-color: #333333; /* Darker background for better contrast */
+    color: #ffffff;
     padding: 10px;
     z-index: 999;
 }
 
 .skip-link:focus {
-    background-color: #2980b9;
+    background-color: #555555;
 }
 
 /* Header Styles */
 header {
-    background-color: #3498db; /* Brighter header color for better contrast */
+    background-color: #eeeeee; /* Light background for better contrast */
     padding: 10px 20px;
-    color: white;
+    color: #000000;
 }
 
 header nav ul {
@@ -54,7 +54,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -76,10 +76,25 @@ header nav ul li a {
     color: white;
 }
 
+#expense-table td {
+    background-color: #f9f9f9;
+}
+
+#expense-table td button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#expense-table td button:hover {
+    background-color: #c0392b;
+}
+
 /* Footer Styles */
 footer {
-    background-color: #0a3d62; /* Darker footer background */
-    color: white;
+    background-color: #eeeeee;
+    color: #000000;
     text-align: center;
     padding: 20px;
 }
