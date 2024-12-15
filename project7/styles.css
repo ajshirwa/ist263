@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #A3CEEB; /* Light blue background for the page */
+    color: #333333; /* Dark text for good contrast */
+}
+
+h1, h2, h3, p {
+    color: #333333; /* Dark text for headers and paragraphs */
+}
+
+a {
+    color: #0066CC; /* Vibrant blue for links */
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #8000FF; /* Purple color for hover effect */
+    text-decoration: underline;
+}
+
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333333; /* Dark background for skip link */
+    color: #ffffff; /* White text for visibility */
+    padding: 10px;
+    z-index: 999;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    clip: auto;
+    height: auto;
+    width: auto;
+    background-color: #555555; /* Slightly lighter background when focused */
+}
+
+/* Header Styles */
+header {
+    background-color: #0066CC; /* Bright blue background for header */
+    color: #ffffff; /* White text for high contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main Section Styles */
+main {
+    padding: 40px;
+    background-color: #ffffff; /* White background for main content */
+    color: #333333; /* Dark text for good readability */
+}
+
+.intro {
+    background-color: #0066CC; /* Blue background for intro section */
+    padding: 40px;
+    color: #ffffff; /* White text for high contrast */
+}
+
+.intro h2 {
+    color: #ffffff; /* Ensure header in intro section is white */
+}
+
+/* Explore Our Tools Section */
+.explore-tools {
+    background-color: #007BFF; /* Medium blue background */
+    padding: 40px;
+    color: #ffffff; /* White text for good contrast */
+}
+
+.explore-tools h2 {
+    color: #ffffff; /* White header text */
+}
+
+/* Expense Tracker and Student Loan Planner Section */
+.tools, .student-loan-planner {
+    background-color: #A1C6FF; /* Soft blue for better contrast */
+    padding: 40px;
+    color: #333333; /* Dark text for better readability */
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tool-item img {
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Get Started Section */
+.get-started {
+    background-color: #FFFFFF; /* White background for 'Get Started' */
+    padding: 40px;
+    color: #333333; /* Dark text for good contrast */
+    text-align: center;
+}
+
+.get-started a {
+    color: #0066CC; /* Blue links in the 'Get Started' section */
+}
+
+.get-started a:hover {
+    color: #8000FF; /* Purple hover effect */
+}
+
+/* Learn Something New Section */
+.learn-new {
+    background-color: #007BFF; /* Medium blue background */
+    padding: 40px;
+    color: #ffffff; /* White text for good contrast */
+    text-align: center;
+}
+
+.learn-new a {
+    color: #ffffff; /* White links in 'Learn New' section */
+}
+
+.learn-new a:hover {
+    color: #8000FF; /* Purple hover effect */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333333; /* Dark background for footer */
+    color: #EDEDED; /* Light gray text for high contrast */
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: #EDEDED; /* Lighter color for footer links */
+}
+
+footer a:hover {
+    color: #8000FF; /* Purple color for footer link hover */
+}
+
+footer p {
+    font-size: 1rem; /* Clear font size for easy reading */
+    color: #EDEDED; /* Ensures text is readable on dark background */
+}
