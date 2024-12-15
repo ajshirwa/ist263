@@ -13,14 +13,14 @@ h1, h2, h3, p {
     color: #000000; /* Dark text for good contrast */
 }
 
-/* Links */
+/* Links - Ensuring dark color for all navigation links */
 a {
-    color: #0000EE; /* Dark blue link color */
+    color: #000000; /* Dark black text for links */
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #8000FF; /* Dark purple on hover/focus for visibility */
+    color: #8000FF; /* Dark purple for hover/focus */
     text-decoration: underline;
 }
 
@@ -59,11 +59,11 @@ header nav ul li {
 
 header nav ul li a {
     font-weight: bold;
-    color: #000000; /* Black text for high contrast links */
+    color: #000000; /* Ensure black color for all header links */
 }
 
 header nav ul li a:hover, header nav ul li a:focus {
-    color: #8000FF; /* Dark purple for hover/focus */
+    color: #8000FF; /* Dark purple on hover/focus for visibility */
 }
 
 /* Main Content */
