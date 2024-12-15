@@ -1,3 +1,4 @@
+
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -84,8 +85,8 @@ main {
 
 .tool-item img {
     margin-right: 20px;
-    width: 70px; /* Slightly larger size for the images */
-    height: 70px; /* Matching height to maintain aspect ratio */
+    width: 50px; /* Much smaller size for the images */
+    height: 50px; /* Matching height to maintain aspect ratio */
     object-fit: contain; /* Prevents stretching */
     border: 2px solid #ccc; /* Adding border around the image */
     padding: 5px; /* Padding inside the box */
@@ -108,8 +109,8 @@ main {
 }
 
 .expense-image, .loan-img {
-    width: 70px; /* Slightly larger image size */
-    height: 70px; /* Consistent height for aspect ratio */
+    width: 50px; /* Smaller image size */
+    height: 50px; /* Consistent height for aspect ratio */
     object-fit: contain;
     border: 2px solid #ccc; /* Border around the image */
     padding: 5px; /* Padding inside the box */
