@@ -115,7 +115,7 @@ section {
 /* Add Expense Button */
 button.add-expense {
     background-color: #3498DB; /* Bright blue button background */
-    color: #171717; /* Dark black text for contrast */
+    color: #000000; /* Black text color */
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -125,7 +125,7 @@ button.add-expense {
 
 button.add-expense:hover {
     background-color: #2980B9; /* Darker blue on hover */
-    color: #171717; /* Ensure text stays dark black on hover */
+    color: #000000; /* Ensure text stays black on hover */
 }
 
 /* Footer Styles */
@@ -147,14 +147,13 @@ input, button {
 
 button {
     background-color: #3498DB; /* Bright blue button background */
-    color: #171717; /* Dark black text for high contrast */
+    color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
     background-color: #2980B9; /* Darker blue on hover */
-    color: #171717; /* Dark black text stays on hover */
 }
 
 input[type="text"], input[type="number"], select {
