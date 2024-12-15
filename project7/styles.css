@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #A3CEEB; /* Light blue background for the page */
+    background-color: #F4F6F9; /* Light grey background for the page */
     color: #333333; /* Dark text for good contrast */
 }
 
@@ -14,12 +14,12 @@ h1, h2, h3, p {
 }
 
 a {
-    color: #0066CC; /* Vibrant blue for links */
+    color: #007BFF; /* Vibrant blue for links */
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #8000FF; /* Purple color for hover effect */
+    color: #0056b3; /* Darker blue for hover effect */
     text-decoration: underline;
 }
 
@@ -41,115 +41,95 @@ a:hover, a:focus {
     clip: auto;
     height: auto;
     width: auto;
-    background-color: #555555; /* Slightly lighter background when focused */
 }
 
 /* Header Styles */
 header {
-    background-color: #0066CC; /* Bright blue background for header */
-    color: #ffffff; /* White text for high contrast */
-    padding: 20px;
+    background-color: #004085; /* Deep blue background */
+    color: #ffffff;
+    padding: 15px;
     text-align: center;
 }
 
-/* Main Section Styles */
-main {
-    padding: 40px;
-    background-color: #ffffff; /* White background for main content */
-    color: #333333; /* Dark text for good readability */
-}
-
-.intro {
-    background-color: #0066CC; /* Blue background for intro section */
-    padding: 40px;
-    color: #ffffff; /* White text for high contrast */
-}
-
-.intro h2 {
-    color: #ffffff; /* Ensure header in intro section is white */
-}
-
-/* Explore Our Tools Section */
-.explore-tools {
-    background-color: #007BFF; /* Medium blue background */
-    padding: 40px;
-    color: #ffffff; /* White text for good contrast */
-}
-
-.explore-tools h2 {
-    color: #ffffff; /* White header text */
-}
-
-/* Expense Tracker and Student Loan Planner Section */
-.tools, .student-loan-planner {
-    background-color: #A1C6FF; /* Soft blue for better contrast */
-    padding: 40px;
-    color: #333333; /* Dark text for better readability */
-}
-
-.tool-item {
+nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
 }
 
-.tool-item img {
-    margin-right: 20px;
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+nav li {
+    margin: 0 15px;
 }
 
-/* Get Started Section */
-.get-started {
-    background-color: #FFFFFF; /* White background for 'Get Started' */
-    padding: 40px;
-    color: #333333; /* Dark text for good contrast */
-    text-align: center;
-}
-
-.get-started a {
-    color: #0066CC; /* Blue links in the 'Get Started' section */
-}
-
-.get-started a:hover {
-    color: #8000FF; /* Purple hover effect */
-}
-
-/* Learn Something New Section */
-.learn-new {
-    background-color: #007BFF; /* Medium blue background */
-    padding: 40px;
-    color: #ffffff; /* White text for good contrast */
-    text-align: center;
-}
-
-.learn-new a {
-    color: #ffffff; /* White links in 'Learn New' section */
-}
-
-.learn-new a:hover {
-    color: #8000FF; /* Purple hover effect */
+nav a {
+    color: white;
+    font-weight: bold;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333333; /* Dark background for footer */
-    color: #EDEDED; /* Light gray text for high contrast */
+    background-color: #333333;
+    color: white;
     text-align: center;
+    padding: 10px 0;
+}
+
+/* Section Styles */
+.intro, .tools, .signup, .learn, .expense-tracker, .student-loan-planner {
+    margin: 20px auto;
     padding: 20px;
-    font-size: 1.1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
 }
 
-footer a {
-    color: #EDEDED; /* Lighter color for footer links */
+/* Tool item styles */
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-footer a:hover {
-    color: #8000FF; /* Purple color for footer link hover */
+.tool-image {
+    max-width: 150px;
+    border-radius: 8px;
 }
 
-footer p {
-    font-size: 1rem; /* Clear font size for easy reading */
-    color: #EDEDED; /* Ensures text is readable on dark background */
+/* Expense Tracker Styles */
+#expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#expense-table th, #expense-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+button {
+    background-color: #FF4136; /* Vibrant red for remove button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C0392B;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tool-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
 }
