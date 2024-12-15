@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icons8-money-transfer-32.png" type="image/png">
     <script>
-        // Function to add expense
         function addExpense() {
             const category = document.getElementById('category').value;
             const amount = parseFloat(document.getElementById('amount').value);
@@ -24,14 +23,12 @@
             }
         }
 
-        // Function to update total
         let total = 0;
         function updateTotal(amount) {
             total += amount;
             document.getElementById('total').innerText = `Total: $${total.toFixed(2)}`;
         }
 
-        // Function to remove expense
         function removeExpense(button) {
             const row = button.closest('tr');
             const amount = parseFloat(row.cells[1].innerText.replace('$', ''));
@@ -59,7 +56,7 @@
 
     <main id="main-content">
         <section class="expense-tracker">
-            <h3>Track Your Spending with Ease!</h3>
+            <h2>Track Your Spending with Ease!</h2>
             <form id="expense-form" onsubmit="event.preventDefault(); addExpense();">
                 <label for="category">Category:</label>
                 <input type="text" id="category" required><br>
@@ -76,9 +73,7 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Expenses will be added here -->
-                </tbody>
+                <tbody></tbody>
             </table>
 
             <p id="total">Total: $0.00</p>
