@@ -84,7 +84,7 @@ main {
 
 .tool-item img {
     margin-right: 20px;
-    max-width: 150px;
+    max-width: 120px; /* Adjust the image size here */
 }
 
 .expense-tracker .tracker-image, .student-loan-planner .loan-image {
@@ -93,7 +93,7 @@ main {
 }
 
 .expense-image, .loan-img {
-    width: 150px;
+    width: 120px; /* Adjust the image size here */
     height: auto;
 }
 
