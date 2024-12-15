@@ -1,164 +1,125 @@
-/* Basic Styles */
+/* General Styles */
 body {
-font-family: 'Roboto', sans-serif;
-font-size: 1rem;
-line-height: 1.6;
-margin: 0;
-padding: 0;
-background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #A3CEEB; /* Light blue background */
+    color: #000000; /* Black text for good contrast */
 }
 
-h1, h2, h3 {
-color: #2c3e50;
+h1, h2, h3, p {
+    color: #000000; /* Ensuring header and paragraph text is black */
 }
 
 a {
-color: #2980b9;
-text-decoration: none;
+    color: #004C8C; /* Darker blue for links for better contrast */
+    text-decoration: none;
 }
 
-a:hover {
-text-decoration: underline;
+a:hover, a:focus {
+    color: #8000FF; /* Lighter blue for hover/focus */
+    text-decoration: underline;
 }
 
-/* Skip to content link */
 .skip-link {
-position: fixed; /* Changed from absolute to fixed */
-top: 0;
-right: 0; /* Ensure it is positioned on the far right */
-background-color: #000;
-color: #fff;
-padding: 10px;
-z-index: 1000;
-text-decoration: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333333; /* Dark background for skip link */
+    color: #ffffff; /* White text for visibility */
+    padding: 10px;
+    z-index: 999;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 .skip-link:focus {
-background-color: #fff;
-color: #000;
+    clip: auto;
+    height: auto;
+    width: auto;
+    background-color: #555555; /* Slightly lighter background when focused */
 }
 
-/* Header and Navigation */
+/* Header Styles */
 header {
-background-color: #2980b9;
-padding: 20px;
-color: white;
-}
-
-header h1 {
-margin: 0;
+    background-color: #ffffff; /* White background for the header */
+    color: #333333; /* Dark text for good contrast */
+    padding: 20px;
+    text-align: center;
 }
 
 nav ul {
-list-style: none;
-padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-display: inline;
-margin-right: 15px;
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Footer */
+/* Main Section Styles */
+main {
+    padding: 40px;
+    background-color: #FFFFFF; /* White background for the main section */
+    color: #000000; /* Black text for main content */
+}
+
+.intro, .tools, .signup, .learn, .student-loan-planner {
+    margin-bottom: 40px;
+}
+
+.tools, .signup, .learn {
+    padding-top: 20px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+}
+
+.tool-item img {
+    margin-right: 20px;
+    width: 100px; /* Significantly larger size for the images */
+    height: 100px; /* Matching height to maintain aspect ratio */
+    object-fit: contain; /* Prevents stretching */
+}
+
+/* Ensuring better contrast between images and content */
+.expense-tracker .tracker-image, .student-loan-planner .loan-image {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.expense-image, .loan-img {
+    width: 100px; /* Larger image size */
+    height: 100px; /* Consistent height for aspect ratio */
+    object-fit: contain;
+}
+
+/* Footer Styles */
 footer {
-background-color: #2c3e50;
-color: white;
-text-align: center;
-padding: 10px 0;
+    background-color: #333333; /* Dark background for the footer */
+    color: #EDEDED; /* Light gray text for high contrast */
+    text-align: center;
+    padding: 20px; /* Increased padding for better readability */
+    font-size: 1.1rem; /* Slightly larger font for footer text */
 }
 
-/* Table */
-table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 20px;
+footer a {
+    color: #EDEDED; /* Lighter color for footer links */
 }
 
-table, th, td {
-border: 1px solid #ddd;
+footer a:hover {
+    color: #8000FF; /* Contrast color for links in footer */
 }
 
-th, td {
-padding: 10px;
-text-align: left;
-}
-
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* NEW: Flexbox layout for tools section */
-.tools {
-display: flex;
-flex-direction: column; /* Ensure items stack vertically */
-align-items: flex-start; /* Align items to the left */
-margin-top: 20px; /* Space from previous sections */
-}
-
-.tools ul {
-list-style-type: none; /* Remove bullet points */
-padding: 0;
-}
-
-.tools ul li {
-margin-bottom: 10px; /* Add space between links */
-}
-
-.tools h3 {
-margin-bottom: 10px; /* Add space below heading */
-}
-
-/* Section Styles */
-section {
-padding: 20px;
-margin: 20px 0;
-background-color: white;
-border-radius: 8px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Section Titles */
-section h2, section h3 {
-font-size: 1.5rem;
-margin-bottom: 10px;
-}
-
-section p {
-font-size: 1.1rem;
-line-height: 1.6;
-}
-
-/* Flex Layout for Intro Section */
-.intro {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.intro h2 {
-text-align: center;
-}
-
-/* Sign Up and Sign In Links */
-.signup a, .signin a {
-margin-right: 10px;
-font-size: 1.1rem;
-}
-
-.signup a:hover, .signin a:hover {
-text-decoration: underline;
-}
-
-/* Learn Section */
-.learn p {
-font-size: 1.1rem;
-}
-
-/* Learn More Link */
-.learn a {
-color: #2980b9;
-text-decoration: none;
-}
-
-.learn a:hover {
-text-decoration: underline;
+/* Additional Accessibility Improvements */
+footer p {
+    font-size: 1rem; /* Clear font size for easy reading */
+    color: #EDEDED; /* Ensures text is readable on dark background */
 }
