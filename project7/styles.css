@@ -103,8 +103,8 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #333333; /* Darker background for footer */
-    color: #FFFFFF; /* White text for better contrast */
+    background-color: #4C4C4C; /* Lighter background for better contrast */
+    color: #FFFFFF; /* White text for contrast */
     text-align: center;
     padding: 20px; /* Increased padding for better readability */
     font-size: 1.1rem; /* Slightly larger font for footer text */
