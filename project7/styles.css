@@ -1,135 +1,78 @@
-/* General Styles */
+
+/* Basic Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; /* Google Font applied */
+    font-size: 1rem; /* Relative unit for font size */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Mostly white background */
-    color: #000000; /* Black text for good contrast */
+    background-color: #f4f4f4;
 }
 
-h1, h2, h3, p {
-    color: #000000; /* Ensuring header and paragraph text is black */
+h1, h2, h3 {
+    color: #2c3e50;
 }
 
 a {
-    color: #004C8C; /* Darker blue for links for better contrast */
+    color: #2980b9;
     text-decoration: none;
 }
 
-a:hover, a:focus {
-    color: #8000FF; /* Lighter blue for hover/focus */
+a:hover {
     text-decoration: underline;
 }
 
+/* Skip to content link */
 .skip-link {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    background-color: #333333; /* Dark background for skip link */
-    color: #ffffff; /* White text for visibility */
+    background-color: #000;
+    color: #fff;
     padding: 10px;
-    z-index: 999;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
+    z-index: 1000;
+    text-decoration: none;
 }
 
 .skip-link:focus {
-    clip: auto;
-    height: auto;
-    width: auto;
-    background-color: #555555; /* Slightly lighter background when focused */
+    background-color: #fff;
+    color: #000;
 }
 
-/* Header Styles */
+/* Header and Navigation */
 header {
-    background-color: #ffffff; /* White background for the header */
-    color: #333333; /* Dark text for good contrast */
+    background-color: #2980b9;
     padding: 20px;
-    text-align: center;
+    color: white;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+header h1 {
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-/* Main Section Styles */
-main {
-    padding: 40px;
-    background-color: #ffffff; /* White background for the main section */
-    color: #000000; /* Black text for main content */
-}
-
-.intro, .tools, .signup, .learn, .student-loan-planner {
-    margin-bottom: 40px;
-}
-
-.tools, .signup, .learn {
-    padding-top: 20px;
-}
-
-.tool-item {
-    display: flex;
-    align-items: center;
-}
-
-.tool-item img {
-    margin-right: 20px;
-    width: 80px; /* Adjusted size for the images */
-    height: 80px; /* Consistent height for aspect ratio */
-    object-fit: contain; /* Prevents stretching */
-}
-
-/* Expense and Loan Image Specific Styles */
-.expense-tracker .expense-image, 
-.student-loan-planner .loan-img {
-    width: 80px;  /* Set width for better control */
-    height: 80px; /* Set height for consistent size */
-    object-fit: contain; /* Ensures images are not stretched */
-}
-
-.expense-image, .loan-img {
-    width: 80px; /* Larger but manageable size */
-    height: 80px; /* Consistent height for aspect ratio */
-    object-fit: contain;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #ffffff; /* White background for high contrast */
-    color: #000000; /* Black text for footer (high contrast with white) */
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
-    padding: 20px; /* Increased padding for better readability */
-    font-size: 1.1rem; /* Slightly larger font for footer text */
+    padding: 10px 0;
 }
 
-footer a {
-    color: #000000; /* Ensuring the footer link is visible */
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-footer a:hover {
-    color: #8000FF; /* Contrast color for links in footer */
+table, th, td {
+    border: 1px solid #ddd;
 }
 
-/* Additional Accessibility Improvements */
-footer p {
-    font-size: 1rem; /* Clear font size for easy reading */
-    color: #000000; /* Ensures text is readable on white background */
+th, td {
+    padding: 10px;
+    text-align: left;
 }
 
-/* Specific Image Sizes for Expense and Loan Images */
-.expense-tracker .expense-image, 
-.student-loan-planner .loan-img {
-    width: 80px;  /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
-    object-fit: contain; /* Ensures images are not stretched */
-}
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
