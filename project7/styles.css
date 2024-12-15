@@ -33,9 +33,17 @@ a:hover, a:focus {
     color: #ffffff; /* White text */
     padding: 10px;
     z-index: 999;
+    clip: rect(1px, 1px, 1px, 1px); /* Hides the link */
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
+/* Make the "Skip to Content" link visible when focused */
 .skip-link:focus {
+    clip: auto; /* Unhides the link */
+    height: auto;
+    width: auto;
     background-color: #555555; /* Lighter dark background on focus */
 }
 
