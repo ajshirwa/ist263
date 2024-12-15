@@ -113,7 +113,7 @@ section {
 }
 
 /* Add Expense Button */
-button.add-expense {
+button {
     background-color: #3498DB; /* Bright blue button background */
     color: #000000; /* Black text color */
     border: none;
@@ -123,7 +123,7 @@ button.add-expense {
     border-radius: 5px;
 }
 
-button.add-expense:hover {
+button:hover {
     background-color: #2980B9; /* Darker blue on hover */
     color: #000000; /* Ensure text stays black on hover */
 }
