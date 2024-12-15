@@ -5,21 +5,21 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #A3CEEB; /* Light blue background */
-    color: #000000; /* Black text for good contrast */
+    background-color: #FFFFFF; /* White background for overall page */
+    color: #333333; /* Dark gray text for good contrast */
 }
 
 h1, h2, h3, p {
-    color: #000000; /* Ensuring header and paragraph text is black */
+    color: #333333; /* Dark text for headers and paragraphs */
 }
 
 a {
-    color: #004C8C; /* Darker blue for links for better contrast */
+    color: #0073e6; /* Subtle blue for links */
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #8000FF; /* Lighter blue for hover/focus */
+    color: #005bb5; /* Slightly darker blue for hover/focus */
     text-decoration: underline;
 }
 
@@ -41,15 +41,16 @@ a:hover, a:focus {
     clip: auto;
     height: auto;
     width: auto;
-    background-color: #555555; /* Slightly lighter background when focused */
+    background-color: #555555; /* Lighter background when focused */
 }
 
 /* Header Styles */
 header {
-    background-color: #ffffff; /* White background for the header */
-    color: #333333; /* Dark text for good contrast */
+    background-color: #FFFFFF; /* White background for the header */
+    color: #333333; /* Dark text for contrast */
     padding: 20px;
     text-align: center;
+    border-bottom: 1px solid #e0e0e0; /* Light border for separation */
 }
 
 nav ul {
@@ -66,7 +67,7 @@ nav ul li {
 main {
     padding: 40px;
     background-color: #FFFFFF; /* White background for the main section */
-    color: #000000; /* Black text for main content */
+    color: #333333; /* Dark text for contrast */
 }
 
 .intro, .tools, .signup, .learn, .student-loan-planner {
@@ -84,9 +85,9 @@ main {
 
 .tool-item img {
     margin-right: 20px;
-    width: 100px; /* Significantly larger size for the images */
-    height: 100px; /* Matching height to maintain aspect ratio */
-    object-fit: contain; /* Prevents stretching */
+    width: 80px; /* Adjusted size for a cleaner look */
+    height: 80px; /* Consistent size */
+    object-fit: contain;
 }
 
 /* Ensuring better contrast between images and content */
@@ -96,30 +97,31 @@ main {
 }
 
 .expense-image, .loan-img {
-    width: 100px; /* Larger image size */
-    height: 100px; /* Consistent height for aspect ratio */
+    width: 80px; /* Adjusted size for a more refined design */
+    height: 80px; /* Consistent size */
     object-fit: contain;
 }
 
 /* Footer Styles */
 footer {
     background-color: #FFFFFF; /* White background for high contrast */
-    color: #000000; /* Black text for footer (high contrast with white) */
+    color: #333333; /* Dark text for footer */
     text-align: center;
-    padding: 20px; /* Increased padding for better readability */
-    font-size: 1.1rem; /* Slightly larger font for footer text */
+    padding: 20px; /* Padding for readability */
+    font-size: 1rem; /* Standard font size for footer text */
+    border-top: 1px solid #e0e0e0; /* Light border for separation */
 }
 
 footer a {
-    color: #000000; /* Ensuring the footer link is visible */
+    color: #0073e6; /* Subtle blue for footer links */
 }
 
 footer a:hover {
-    color: #8000FF; /* Contrast color for links in footer */
+    color: #005bb5; /* Darker blue for hover effect */
 }
 
 /* Additional Accessibility Improvements */
 footer p {
     font-size: 1rem; /* Clear font size for easy reading */
-    color: #000000; /* Ensures text is readable on white background */
+    color: #333333; /* Ensures text is readable */
 }
