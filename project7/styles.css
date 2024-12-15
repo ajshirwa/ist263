@@ -102,8 +102,19 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #004D7F; /* Dark blue for better contrast */
+    color: #FFFFFF; /* White text for clear contrast */
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #FFFFFF; /* Keep footer links white */
+    text-decoration: underline;
+}
+
+footer a:hover, footer a:focus {
+    color: #FF6600; /* Accent color for hover/focus */
+    text-decoration: underline;
 }
