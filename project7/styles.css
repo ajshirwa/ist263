@@ -29,57 +29,70 @@ a:hover {
     background-color: #000;
     color: #fff;
     padding: 10px;
-    z-index: 1000;
-    text-decoration: none;
+    z-index: 999;
 }
 
 .skip-link:focus {
-    background-color: #fff;
-    color: #000;
+    background-color: #f39c12;
 }
 
-/* Header and Navigation */
+/* Header Styles */
 header {
     background-color: #2980b9;
-    padding: 20px;
+    padding: 10px 20px;
     color: white;
 }
 
-header h1 {
-    margin: 0;
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Table styles for Expense Tracker */
+#expense-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#expense-table th, #expense-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#expense-table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* Buttons and Links */
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3498db;
 }
 
 /* Footer */
 footer {
+    text-align: center;
+    padding: 20px;
     background-color: #2c3e50;
     color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* NEW: Flexbox layout for tools section */
-.tools {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 }
