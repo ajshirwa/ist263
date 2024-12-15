@@ -9,11 +9,11 @@ body {
 }
 
 h1, h2, h3 {
-    color: #2c3e50;
+    color: #1c2833; /* Darker shade for better contrast */
 }
 
 a {
-    color: #1f5e80; /* Adjusted for better contrast */
+    color: #1565c0; /* Increased contrast for links */
     text-decoration: none;
 }
 
@@ -26,19 +26,19 @@ a:hover {
     position: fixed;  
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: #0a3d62; /* Darker background for better contrast */
     color: #fff;
     padding: 10px;
     z-index: 999;
 }
 
 .skip-link:focus {
-    background-color: #f39c12;
+    background-color: #2980b9;
 }
 
 /* Header Styles */
 header {
-    background-color: #2980b9;
+    background-color: #3498db; /* Brighter header color for better contrast */
     padding: 10px 20px;
     color: white;
 }
@@ -72,26 +72,37 @@ header nav ul li a {
 }
 
 #expense-table th {
-    background-color: #2980b9;
+    background-color: #1c2833; /* Darker header background */
     color: white;
 }
 
-/* Buttons and Links */
-button {
-    background-color: #2980b9;
+/* Footer Styles */
+footer {
+    background-color: #0a3d62; /* Darker footer background */
     color: white;
-    padding: 10px 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Form input and button styles */
+input, button {
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #3498db;
+    background-color: #2980b9;
 }
 
-footer {
-    background-color: #2980b9;
-    padding: 20px;
-    color: white;
-    text-align: center;
+input[type="text"], input[type="number"] {
+    width: 100%;
+    max-width: 300px;
 }
