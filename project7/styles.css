@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: #2980b9;
+    color: #1f5e80; /* Adjusted for better contrast */
     text-decoration: none;
 }
 
@@ -80,8 +80,8 @@ header nav ul li a {
 button {
     background-color: #2980b9;
     color: white;
+    padding: 10px 20px;
     border: none;
-    padding: 10px;
     cursor: pointer;
 }
 
@@ -89,10 +89,9 @@ button:hover {
     background-color: #3498db;
 }
 
-/* Footer Styles */
 footer {
-    background-color: #34495e;
+    background-color: #2980b9;
+    padding: 20px;
     color: white;
-    padding: 10px;
     text-align: center;
 }
