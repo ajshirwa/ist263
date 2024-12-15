@@ -6,20 +6,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #A3CEEB; /* Light blue background */
-    color: #000000; /* Black text for good contrast */
+    color: #333333; /* Dark text for good contrast */
 }
 
 h1, h2, h3, p {
-    color: #000000; /* Ensuring header and paragraph text is black */
+    color: #333333; /* Ensuring header and paragraph text is dark */
 }
 
 a {
-    color: #004C8C; /* Darker blue for links for better contrast */
+    color: #0066CC; /* Vibrant blue for links */
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #8000FF; /* Lighter blue for hover/focus */
+    color: #8000FF; /* Purple hover color */
     text-decoration: underline;
 }
 
@@ -46,8 +46,8 @@ a:hover, a:focus {
 
 /* Header Styles */
 header {
-    background-color: #ffffff; /* White background for the header */
-    color: #333333; /* Dark text for good contrast */
+    background-color: #0066CC; /* Bright blue background for header */
+    color: #ffffff; /* White text for good contrast */
     padding: 20px;
     text-align: center;
 }
@@ -65,8 +65,8 @@ nav ul li {
 /* Main Section Styles */
 main {
     padding: 40px;
-    background-color: #FFFFFF; /* White background for the main section */
-    color: #000000; /* Black text for main content */
+    background-color: #ffffff; /* White background for the main section */
+    color: #333333; /* Dark text for good contrast */
 }
 
 .intro, .tools, .signup, .learn, .student-loan-planner {
@@ -84,9 +84,30 @@ main {
 
 .tool-item img {
     margin-right: 20px;
-    width: 100px; /* Significantly larger size for the images */
+    width: 100px; /* Larger size for the images */
     height: 100px; /* Matching height to maintain aspect ratio */
     object-fit: contain; /* Prevents stretching */
+}
+
+/* Section Background Color Variations */
+.intro {
+    background-color: #F0F8FF; /* Light blue for intro section */
+}
+
+.tools {
+    background-color: #E6F7FF; /* Slightly darker blue for tools section */
+}
+
+.signup {
+    background-color: #D6ECFF; /* Soft blue for sign-up section */
+}
+
+.learn {
+    background-color: #C6E5FF; /* Lighter blue for learn section */
+}
+
+.student-loan-planner {
+    background-color: #B6D8FF; /* Soft blue for loan planner section */
 }
 
 /* Ensuring better contrast between images and content */
@@ -103,7 +124,7 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #333333; /* Dark background for the footer */
+    background-color: #333333; /* Dark background for footer */
     color: #EDEDED; /* Light gray text for high contrast */
     text-align: center;
     padding: 20px; /* Increased padding for better readability */
@@ -115,7 +136,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #8000FF; /* Contrast color for links in footer */
+    color: #8000FF; /* Purple color for footer link hover */
 }
 
 /* Additional Accessibility Improvements */
