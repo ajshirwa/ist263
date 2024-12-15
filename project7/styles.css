@@ -5,21 +5,21 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF; /* White background for overall page */
-    color: #333333; /* Dark gray text for good contrast */
+    background-color: #ffffff; /* Mostly white background */
+    color: #000000; /* Black text for good contrast */
 }
 
 h1, h2, h3, p {
-    color: #333333; /* Dark text for headers and paragraphs */
+    color: #000000; /* Ensuring header and paragraph text is black */
 }
 
 a {
-    color: #0073e6; /* Subtle blue for links */
+    color: #004C8C; /* Darker blue for links for better contrast */
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #005bb5; /* Slightly darker blue for hover/focus */
+    color: #8000FF; /* Lighter blue for hover/focus */
     text-decoration: underline;
 }
 
@@ -41,16 +41,15 @@ a:hover, a:focus {
     clip: auto;
     height: auto;
     width: auto;
-    background-color: #555555; /* Lighter background when focused */
+    background-color: #555555; /* Slightly lighter background when focused */
 }
 
 /* Header Styles */
 header {
-    background-color: #FFFFFF; /* White background for the header */
-    color: #333333; /* Dark text for contrast */
+    background-color: #ffffff; /* White background for the header */
+    color: #333333; /* Dark text for good contrast */
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid #e0e0e0; /* Light border for separation */
 }
 
 nav ul {
@@ -66,8 +65,8 @@ nav ul li {
 /* Main Section Styles */
 main {
     padding: 40px;
-    background-color: #FFFFFF; /* White background for the main section */
-    color: #333333; /* Dark text for contrast */
+    background-color: #ffffff; /* White background for the main section */
+    color: #000000; /* Black text for main content */
 }
 
 .intro, .tools, .signup, .learn, .student-loan-planner {
@@ -85,43 +84,52 @@ main {
 
 .tool-item img {
     margin-right: 20px;
-    width: 80px; /* Adjusted size for a cleaner look */
-    height: 80px; /* Consistent size */
-    object-fit: contain;
+    width: 80px; /* Adjusted size for the images */
+    height: 80px; /* Consistent height for aspect ratio */
+    object-fit: contain; /* Prevents stretching */
 }
 
-/* Ensuring better contrast between images and content */
-.expense-tracker .tracker-image, .student-loan-planner .loan-image {
-    display: inline-block;
-    margin-right: 20px;
+/* Expense and Loan Image Specific Styles */
+.expense-tracker .expense-image, 
+.student-loan-planner .loan-img {
+    width: 80px;  /* Set width for better control */
+    height: 80px; /* Set height for consistent size */
+    object-fit: contain; /* Ensures images are not stretched */
 }
 
 .expense-image, .loan-img {
-    width: 80px; /* Adjusted size for a more refined design */
-    height: 80px; /* Consistent size */
+    width: 80px; /* Larger but manageable size */
+    height: 80px; /* Consistent height for aspect ratio */
     object-fit: contain;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #FFFFFF; /* White background for high contrast */
-    color: #333333; /* Dark text for footer */
+    background-color: #ffffff; /* White background for high contrast */
+    color: #000000; /* Black text for footer (high contrast with white) */
     text-align: center;
-    padding: 20px; /* Padding for readability */
-    font-size: 1rem; /* Standard font size for footer text */
-    border-top: 1px solid #e0e0e0; /* Light border for separation */
+    padding: 20px; /* Increased padding for better readability */
+    font-size: 1.1rem; /* Slightly larger font for footer text */
 }
 
 footer a {
-    color: #0073e6; /* Subtle blue for footer links */
+    color: #000000; /* Ensuring the footer link is visible */
 }
 
 footer a:hover {
-    color: #005bb5; /* Darker blue for hover effect */
+    color: #8000FF; /* Contrast color for links in footer */
 }
 
 /* Additional Accessibility Improvements */
 footer p {
     font-size: 1rem; /* Clear font size for easy reading */
-    color: #333333; /* Ensures text is readable */
+    color: #000000; /* Ensures text is readable on white background */
+}
+
+/* Specific Image Sizes for Expense and Loan Images */
+.expense-tracker .expense-image, 
+.student-loan-planner .loan-img {
+    width: 80px;  /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    object-fit: contain; /* Ensures images are not stretched */
 }
