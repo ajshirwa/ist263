@@ -83,20 +83,20 @@ main {
 }
 
 .tool-item img {
-    margin-right: 10px;
-    width: 1.5rem; /* 1.5rem is about the same height as the text */
-    height: 1.5rem; /* Keep the aspect ratio consistent */
+    margin-right: 20px;
+    width: 4rem; /* Increase the size of images */
+    height: 4rem; /* Keep the aspect ratio consistent */
     object-fit: contain; /* Make sure images don't stretch */
 }
 
 .expense-tracker .tracker-image, .student-loan-planner .loan-image {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .expense-image, .loan-img {
-    width: 1.5rem; /* Keep the images inline and at a consistent size */
-    height: 1.5rem; /* Keep the aspect ratio consistent */
+    width: 4rem; /* Increased image size */
+    height: 4rem; /* Increased image size */
     object-fit: contain; /* Prevent stretching */
 }
 
